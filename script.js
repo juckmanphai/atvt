@@ -182,28 +182,24 @@ function initializeDefaultData() {
 
 // === ฟังก์ชันตั้งค่าวันที่และเวลาเริ่มต้น ===
 function setDefaultDateTime() {
-    const today = new Date().toISOString().split('T')[0];
+    // ใช้เวลาปัจจุบันของประเทศไทย
+    const thaiTime = getThaiTime();
+    const today = getThaiDateString();
+    
     document.getElementById('activity-date').value = today;
     
-    // ตั้งค่าเวลาเริ่มต้นเป็น 1 ชั่วโมงก่อนเวลาปัจจุบัน
-    const now = new Date();
-    const oneHourAgo = new Date(now.getTime() - 60 * 60 * 1000);
+    // ตั้งค่าเวลาเริ่มต้นเป็น 1 ชั่วโมงก่อนเวลาปัจจุบันของไทย
+    const oneHourAgo = new Date(thaiTime.getTime() - 60 * 60 * 1000);
     
-    // ตั้งค่าเวลาเริ่มต้น (1 ชั่วโมงที่แล้ว) - ไม่ปัดนาที
-    const startHours = oneHourAgo.getHours().toString().padStart(2, '0');
-    const startMinutes = oneHourAgo.getMinutes().toString().padStart(2, '0');
-    
-    const startTime = `${startHours}:${startMinutes}`;
+    const startTime = formatThaiTime(oneHourAgo);
     document.getElementById('start-time').value = startTime;
     
-    // ตั้งค่าเวลาสิ้นสุดเป็นเวลาปัจจุบัน - ไม่ปัดนาที
-    const endHours = now.getHours().toString().padStart(2, '0');
-    const endMinutes = now.getMinutes().toString().padStart(2, '0');
-    
-    const endTime = `${endHours}:${endMinutes}`;
+    // ตั้งค่าเวลาสิ้นสุดเป็นเวลาปัจจุบันของไทย
+    const endTime = formatThaiTime(thaiTime);
     document.getElementById('end-time').value = endTime;
     
-    console.log(`⏰ ตั้งค่าเวลาเริ่มต้น: ${startTime} (1 ชั่วโมงที่แล้ว), เวลาสิ้นสุด: ${endTime} (ปัจจุบัน)`);
+    console.log(`⏰ ตั้งค่าเวลาเริ่มต้น (ไทย): ${startTime} (1 ชั่วโมงที่แล้ว), เวลาสิ้นสุด: ${endTime} (ปัจจุบัน), วันที่: ${today}`);
+    console.log(`🌏 เวลาไทยปัจจุบัน: ${thaiTime.toLocaleString('th-TH')}`);
     
     // ✅ รีเซ็ตปุ่มแก้ไข
     document.getElementById('save-activity-button').classList.remove('hidden');
@@ -243,7 +239,23 @@ function formatDuration(minutes) {
     if (parts.length === 0) return "0 นาที";
     return parts.join(' ');
 }
+// === ฟังก์ชันจัดการเวลาไทย ===
+function getThaiTime() {
+    const now = new Date();
+    const thaiOffset = 7 * 60; // UTC+7 ในหน่วยนาที
+    return new Date(now.getTime() + (thaiOffset + now.getTimezoneOffset()) * 60000);
+}
 
+function getThaiDateString() {
+    const thaiTime = getThaiTime();
+    return thaiTime.toISOString().split('T')[0];
+}
+
+function formatThaiTime(date) {
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+}
 // === ฟังก์ชันจัดการฟอร์มกิจกรรม ===
 function handleActivityFormSubmit(event) {
     event.preventDefault();
@@ -1452,10 +1464,10 @@ function initiateSingleDateExport() {
     
     closeExportOptionsModal();
     
-    // ตั้งค่าวันที่ปัจจุบันเป็นค่าเริ่มต้น
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('exportStartDate').value = today;
-    document.getElementById('exportEndDate').value = today;
+// ตั้งค่าวันที่ปัจจุบันเป็นค่าเริ่มต้น (ใช้เวลาไทย)
+const thaiToday = getThaiDateString();
+document.getElementById('exportStartDate').value = thaiToday;
+document.getElementById('exportEndDate').value = thaiToday;
     
     // แสดง Modal เลือกวันที่
     document.getElementById('singleDateExportModal').style.display = 'flex';
@@ -3881,10 +3893,11 @@ document.addEventListener('DOMContentLoaded', function() {
     loadUserActivities();
     populatePersonFilter();
     
-    // กำหนดค่าเริ่มต้นสำหรับฟิลด์สรุป
-    document.getElementById('summary-date').value = today;
-    document.getElementById('summary-start-date').value = today;
-    document.getElementById('summary-end-date').value = today;
+// กำหนดค่าเริ่มต้นสำหรับฟิลด์สรุป (ใช้เวลาไทย)
+const thaiToday = getThaiDateString();
+document.getElementById('summary-date').value = thaiToday;
+document.getElementById('summary-start-date').value = thaiToday;
+document.getElementById('summary-end-date').value = thaiToday;
     
     // กำหนด event listeners
     document.getElementById('activity-form').addEventListener('submit', handleActivityFormSubmit);
