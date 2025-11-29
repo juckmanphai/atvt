@@ -1,206 +1,204 @@
-/* ===== RESET & BASE STYLES ===== */
+/* --- 1. Global Styles & Imports --- */
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Sarabun', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
+  font-family: "Sarabun", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
-/* ===== TYPOGRAPHY ===== */
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
-/* ===== LAYOUT & CONTAINER ===== */
-.container { 
-    max-width: 800px; 
-    margin: 5px auto; 
-    background-color: #FAFAD2; 
-    border: 2px solid #ED01ED; 
-    padding: 10px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    width: 98%; 
+/* --- 2. Layout & Main Containers --- */
+.container {
+  background-color: #FAFAD2;
+  border: 1.5px solid #ED01ED;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 5px auto;
+  max-width: 900px;
+  padding: 5px;
+  width: 98%;
 }
 
-/* ===== SECTION STYLING ===== */
-.form-section, .data-section {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #eee;
+.form-section,
+.data-section {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  padding: 15px;
 }
 
 .section-content {
-    display: none;
-    padding: 5px 10px; /* เดิม 15px */
-    border: 1px solid #eee;
-    border-radius: 5px;
-    margin-bottom: 5px; /* เดิม 15px */
-    background-color: #fff;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  display: none;
+  margin-bottom: 5px;
+  padding: 5px 10px;
 }
 
 .section-content.active {
-    display: block;
+  display: block;
 }
 
-/* ===== IMPROVED MAIN SECTION HEADERS ===== */
+/* --- 3. Headers (Main & Summary) --- */
 .main-section-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 15px;
+  transition: all 0.3s ease;
 }
 
 .main-section-header:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
 
 .main-section-header.active {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
 }
 
-/* สีเฉพาะสำหรับแต่ละเมนูหลัก */
 .header-add-data {
-    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
-    border-left: 6px solid #ff4757;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  border-left: 6px solid #ff4757;
 }
 
 .header-actions {
-    background: linear-gradient(135deg, #0be881 0%, #2ed573 100%);
-    border-left: 6px solid #2ed573;
+  background: linear-gradient(135deg, #0be881 0%, #2ed573 100%);
+  border-left: 6px solid #2ed573;
 }
 
 .header-summary {
-    background: linear-gradient(135deg, #ff9f43 0%, #ffaf60 100%);
-    border-left: 6px solid #ff9f43;
+  background: linear-gradient(135deg, #ff9f43 0%, #ffaf60 100%);
+  border-left: 6px solid #ff9f43;
 }
 
-/* ===== IMPROVED SUBSECTION HEADERS ===== */
 .summary-subsection-header {
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    color: #333;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-    border-left: 4px solid #667eea;
+  align-items: center;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  border-left: 4px solid #667eea;
+  border-radius: 8px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 12px;
+  transition: all 0.3s ease;
 }
 
 .summary-subsection-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  content: '';
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  top: 0;
+  transition: left 0.5s ease;
+  width: 100%;
 }
 
 .summary-subsection-header:hover::before {
-    left: 100%;
+  left: 100%;
 }
 
 .summary-subsection-header:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
 }
 
-/* สีเฉพาะสำหรับแต่ละเมนูย่อย */
 .summary-subsection-header.summary-date {
-    background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
 }
 
 .summary-subsection-header.summary-range {
-    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
-    color: #2d3436;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+  color: #2d3436;
 }
 
 .summary-subsection-header.summary-controls {
-    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+  background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
 }
 
 .section-header {
-    background-color: #f0f0f0;
-    padding: 12px 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 12px 15px;
+  transition: background-color 0.3s ease;
 }
 
 .section-header:hover {
-    background-color: #e0e0e0;
+  background-color: #e0e0e0;
 }
 
 .section-header.active {
-    background-color: #d0e8ff;
+  background-color: #d0e8ff;
 }
 
+/* --- 4. Summary Subsection Components --- */
 .summary-subsection {
-    margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .summary-subsection .entry-form {
-    background-color: #f8f9fa;
-    padding: 5px;
-    border-radius: 30px;
-    border-left: 3px solid #dee2e6;
+  background-color: #f8f9fa;
+  border-left: 3px solid #dee2e6;
+  border-radius: 30px;
+  padding: 5px;
 }
 
 .summary-subsection .entry-group {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .summary-subsection select {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    background-color: white;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 8px 12px;
+  width: 100%;
 }
 
 .summary-subsection label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+  color: #333;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-/* ===== IMPROVED ARROW ICONS ===== */
-.arrow, .menu-icon {
-    transition: transform 0.3s ease;
-    font-size: 1rem;
-    font-weight: bold;
-    margin-left: 10px;
+/* --- 5. Icons & Toggles --- */
+.arrow,
+.menu-icon {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
 }
 
 .main-section-header.active .arrow,
@@ -208,14 +206,14 @@ body {
 .section-header.active .arrow,
 .main-section-header.active .menu-icon,
 .summary-subsection-header.active .menu-icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-/* ===== FORM STYLING ===== */
+/* --- 6. Forms & Inputs (General) --- */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 input[type="text"],
@@ -224,44 +222,45 @@ input[type="date"],
 input[type="time"],
 select,
 textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: calc(100% - 24px);
-    box-sizing: border-box;
-    resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 12px;
+  resize: vertical;
+  width: calc(100% - 24px);
 }
 
 label {
-    font-weight: bold;
-    margin-top: 10px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
-#customPersonInput, #customActivityTypeInput {
-    display: none;
+#customPersonInput,
+#customActivityTypeInput {
+  display: none;
 }
 
-/* ===== COMPACT FORM STYLING ===== */
+/* --- 7. Specific Form Styles (#activity-form) --- */
 #activity-form {
-    padding: 8px !important;
-    margin: 0 !important;
+  margin: 0 !important;
+  padding: 8px !important;
 }
 
 #activity-form .form-section {
-    padding: 10px 8px !important;
-    margin-bottom: 12px !important;
+  margin-bottom: 12px !important;
+  padding: 10px 8px !important;
 }
 
 #activity-form .section-content {
-    padding: 8px !important;
-    margin-bottom: 8px !important;
+  margin-bottom: 8px !important;
+  padding: 8px !important;
 }
 
 #activity-form label {
-    margin-top: 4px !important;
-    margin-bottom: 3px !important;
-    font-size: 0.9rem !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 3px !important;
+  margin-top: 4px !important;
 }
 
 #activity-form input[type="text"],
@@ -270,373 +269,391 @@ label {
 #activity-form input[type="time"],
 #activity-form select,
 #activity-form textarea {
-    padding: 6px 8px !important;
-    font-size: 0.9rem !important;
-    margin-bottom: 4px !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 4px !important;
+  padding: 6px 8px !important;
 }
 
-/* ===== TIME INPUTS STYLING - IMPROVED FOR MOBILE ===== */
+/* --- 8. Component: Time Inputs (Definition 1) --- */
 .time-inputs-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 15px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 5px;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  padding-bottom: 5px;
 }
 
 .time-input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 auto;
-    min-width: 120px;
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  min-width: 120px;
 }
 
 .time-input-group input[type="time"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
 }
 
 .time-label {
-    margin-top: 5px;
-    font-size: 0.85rem;
-    color: #666;
-    white-space: nowrap;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  white-space: nowrap;
 }
 
 .time-separator {
-    font-weight: bold;
-    color: #333;
-    margin: 0 5px;
-    white-space: nowrap;
+  color: #333;
+  font-weight: bold;
+  margin: 0 5px;
+  white-space: nowrap;
 }
 
-/* ===== SELECT WRAPPER STYLING ===== */
-.select-wrapper { 
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    gap: 8px; 
-    width: 100%; 
-    margin: 10px auto; 
-    flex-wrap: nowrap;
-    position: relative;
+/* --- 9. Component: Management Controls (Definition 1) --- */
+.select-wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  justify-content: space-between;
+  margin: 10px auto;
+  position: relative;
+  width: 100%;
 }
 
 .select-wrapper label {
-    flex: 0 0 120px;
-    margin-right: 10px;
-    text-align: right;
-    white-space: nowrap;
+  flex: 0 0 120px;
+  margin-right: 10px;
+  text-align: right;
+  white-space: nowrap;
 }
 
-.select-wrapper select { 
-    flex: 1 1 auto;
-    min-width: 150px;
-    margin: 0; 
+.select-wrapper select {
+  flex: 1 1 auto;
+  margin: 0;
+  min-width: 150px;
 }
 
-.manage-btn-inline { 
-    position: static;
-    width: 36px; 
-    height: 36px; 
-    padding: 0; 
-    font-size: 18px; 
-    border-radius: 8px; 
-    background-color: #6c757d; 
-    color: white; 
-    border: none; 
-    cursor: pointer; 
-    transition: all 0.2s ease; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    flex-shrink: 0;
-    margin-right: 10px;
+.manage-btn-inline {
+  align-items: center;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 18px;
+  height: 38px;
+  justify-content: center;
+  margin-right: 10px;
+  padding: 0;
+  position: static;
+  transition: all 0.2s ease;
+  width: 38px;
+  z-index: 10;
 }
 
-.manage-btn-inline:hover { 
-    background-color: #5a6268; 
-    transform: rotate(45deg); 
-}
-
-.management-actions { 
-    display: none; 
-    justify-content: center; 
-    gap: 10px; 
-    margin: 5px auto 15px; 
-    animation: fadeIn 0.3s; 
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-@keyframes fadeIn { 
-    from { opacity: 0; transform: translateY(-10px); } 
-    to { opacity: 1; transform: translateY(0); } 
-}
-
-.management-actions button { 
-    width: auto; 
-    padding: 6px 12px; 
-    font-size: 14px; 
-    margin: 0; 
-    border: none; 
-    color: white; 
-    transition: background-color 0.2s ease; 
-}
-
-.add-btn { background-color: #28a745; }
-.add-btn:hover { background-color: #218838; }
-.edit-btn { background-color: #ffc107; color: #212529 !important; }
-.edit-btn:hover { background-color: #e0a800; }
-.delete-btn { background-color: #dc3545; }
-.delete-btn:hover { background-color: #c82333; }
-.reset-btn { background-color: #17a2b8; }
-.reset-btn:hover { background-color: #138496; }
-
-/* ===== EXPANDED MANAGEMENT CONTAINER STYLING ===== */
-.management-container {
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.management-row {
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.select-wrapper {
-    width: 100%;
-    margin: 10px auto;
-}
-
-/* ทำให้กรอบการจัดการขยายเต็มความกว้าง */
-.form-section .section-content.active {
-    width: 100%;
-}
-
-/* ปรับปรุงการแสดงผลของส่วนจัดการกิจกรรม */
-#activity-form .management-container,
-#activity-form .management-row,
-#activity-form .select-wrapper {
-    width: 100%;
-    max-width: 100%;
-}
-
-/* ปรับปรุงสำหรับส่วนจัดการกิจกรรมโดยเฉพาะ */
-.management-section .section-content {
-    width: 100% !important;
-    max-width: 100% !important;
-}
-
-/* ปรับปรุงสำหรับมือถือ */
-@media (max-width: 768px) {
-    .management-container,
-    .management-row,
-    .select-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-    
-    .form-section .section-content.active {
-        width: 100% !important;
-        padding: 5px !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .management-container,
-    .management-row,
-    .select-wrapper {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-}
-
-/* ===== COMPACT MANAGEMENT ROW ===== */
-.management-row {
-    margin-bottom: 8px !important;
-    gap: 6px !important;
-}
-
-.management-container {
-    margin-bottom: 4px !important;
-}
-
-.select-wrapper {
-    margin: 2px auto 3px !important;
-    gap: 6px !important;
+.manage-btn-inline:hover {
+  background-color: #5a6268;
+  transform: rotate(45deg);
 }
 
 .management-actions {
-    margin-top: 3px !important;
-    margin-bottom: 2px !important;
-    gap: 3px !important;
+  animation: fadeIn 0.3s;
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 5px auto 15px;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .management-actions button {
-    padding: 4px 6px !important;
-    font-size: 11px !important;
-    margin: 0 !important;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin: 0;
+  padding: 6px 12px;
+  transition: background-color 0.2s ease;
+  width: auto;
 }
 
-/* ===== COMPACT TIME INPUTS ===== */
+.add-btn {
+  background-color: #28a745;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #212529 !important;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.reset-btn {
+  background-color: #17a2b8;
+}
+
+.reset-btn:hover {
+  background-color: #138496;
+}
+
+.management-container {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.management-row {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.select-wrapper {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.form-section .section-content.active {
+  width: 100%;
+}
+
+#activity-form .management-container,
+#activity-form .management-row,
+#activity-form .select-wrapper {
+  max-width: 100%;
+  width: 100%;
+}
+
+.management-section .section-content {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* --- 10. Responsive Media Queries (Interleaved) --- */
+@media (max-width: 768px) {
+  .management-container,
+  .management-row,
+  .select-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .form-section .section-content.active {
+    padding: 5px !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .management-container,
+  .management-row,
+  .select-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* --- 11. Component: Management Controls (Responsive Overrides) --- */
+.management-row {
+  gap: 6px !important;
+  margin-bottom: 8px !important;
+}
+
+.management-container {
+  margin-bottom: 4px !important;
+}
+
+.select-wrapper {
+  gap: 6px !important;
+  margin: 2px auto 3px !important;
+}
+
+.management-actions {
+  gap: 3px !important;
+  margin-bottom: 2px !important;
+  margin-top: 3px !important;
+}
+
+.management-actions button {
+  font-size: 11px !important;
+  margin: 0 !important;
+  padding: 4px 6px !important;
+}
+
+/* --- 12. Component: Time Inputs (Responsive Overrides) --- */
 .time-inputs-container {
-    margin-bottom: 8px !important;
-    gap: 4px !important;
+  gap: 4px !important;
+  margin-bottom: 8px !important;
 }
 
 .time-input-group {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .time-input-group input[type="time"] {
-    padding: 6px 8px !important;
-    margin: 0 !important;
+  margin: 0 !important;
+  padding: 6px 8px !important;
 }
 
 .time-label {
-    margin-top: 2px !important;
-    margin-bottom: 0 !important;
-    font-size: 0.75rem !important;
+  font-size: 0.75rem !important;
+  margin-bottom: 0 !important;
+  margin-top: 2px !important;
 }
 
-/* ===== COMPACT BUTTON CONTAINER ===== */
+/* --- 13. Component: Buttons (Overrides) --- */
 .button-container {
-    margin-top: 8px !important;
-    gap: 6px !important;
+  gap: 6px !important;
+  margin-top: 3px !important;
 }
 
 .button-container button {
-    margin-top: 0 !important;
-    padding: 8px 12px !important;
-    font-size: 0.9rem !important;
+  font-size: 0.9rem !important;
+  border-radius: 30px;
+  width: 160px;
+  margin-top: 0 !important;
+  padding: 8px 15px !important;
 }
 
-/* ===== COMPACT MAIN HEADER ===== */
 .header-add-data {
-    margin: 5px 0 8px !important;
-    padding: 12px 15px !important;
+  margin: 5px 0 8px !important;
+  padding: 12px 15px !important;
 }
 
-/* สำหรับเดสก์ท็อป */
+/* --- 14. Responsive Media Queries (Interleaved) --- */
 @media (min-width: 769px) {
   .management-actions {
     display: flex;
-    justify-content: flex-start;
     gap: 10px;
+    justify-content: flex-start;
   }
 }
 
-/* สำหรับมือถือ */
 @media (max-width: 768px) {
   .management-actions {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     gap: 6px;
+    justify-content: center;
   }
-
   .management-actions button {
     flex: 1 1 40%;
+    font-size: 0.85rem;
     min-width: 60px;
     padding: 6px 8px;
-    font-size: 0.85rem;
   }
 }
 
-/* ===== IMPROVED MANAGEMENT ACTIONS FOR MOBILE ===== */
 @media (max-width: 768px) {
   .management-actions {
-    display: none;
-    justify-content: center;
-    gap: 8px;
-    margin: 8px auto 12px;
     animation: fadeIn 0.3s;
-    flex-wrap: nowrap;
-    width: 100%;
-    order: 3;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: center;
+    display: none;
+    margin: 8px auto 12px;
+    order: 3;
+    width: 100%;
   }
-  
   .management-actions.active {
     display: flex;
   }
-  
   .management-actions button {
-    width: auto;
-    padding: 6px 10px;
-    font-size: 12px;
-    margin: 0;
     border: none;
     color: white;
-    transition: background-color 0.2s ease;
     flex: 0 1 auto;
+    font-size: 12px;
+    margin: 0;
     min-width: 60px;
+    padding: 6px 10px;
+    transition: background-color 0.2s ease;
     white-space: nowrap;
+    width: auto;
   }
-  
   .select-wrapper {
     flex-wrap: nowrap;
     gap: 6px;
   }
-  
   .select-wrapper select {
     flex: 1;
     min-width: 120px;
   }
-  
   .manage-btn-inline {
-    width: 32px;
-    height: 32px;
     font-size: 16px;
+    height: 38px;
     margin-right: 5px;
+    width: 38px;
   }
 }
 
-/* ===== BUTTON STYLING ===== */
+/* --- 15. Component: Buttons (Base Styles) --- */
 button {
-    padding: 12px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 5px;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .button-container {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .button-container button {
-    flex: 1;
-    min-width: 120px;
+  flex: 1;
+  min-width: 120px;
 }
 
-/* ===== TABLE STYLING ===== */
+/* --- 16. Component: Table (Definition 1) --- */
 .table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  overflow-x: auto;
+  width: 100%;
 }
 
 #activityTable,
@@ -646,911 +663,855 @@ button:hover {
 #activity-types-table,
 #user-list-table,
 #all-activities-table {
-    table-layout: auto;
-    width: auto;
-    min-width: 100%;
-    border-collapse: collapse;
+  border-collapse: collapse;
+  min-width: 100%;
+  table-layout: auto;
+  width: auto;
 }
 
-#activityTable th, #activityTable td,
-#modalBodyContent table th, #modalBodyContent table td,
-.summaryResult table th, .summaryResult table td,
-#activity-list-table th, #activity-list-table td,
-#activity-types-table th, #activity-types-table td,
-#user-list-table th, #user-list-table td,
-#all-activities-table th, #all-activities-table td {
-    white-space: nowrap;
-    vertical-align: middle;
-    padding: 8px 6px;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 80px !important; /* ปรับตามความเหมาะสม */
-    line-height: 1.2;
-    border: 1px solid #ddd;
-    text-align: center;
+#activityTable th,
+#activityTable td,
+#modalBodyContent table th,
+#modalBodyContent table td,
+.summaryResult table th,
+.summaryResult table td,
+#activity-list-table th,
+#activity-list-table td,
+#activity-types-table th,
+#activity-types-table td,
+#user-list-table th,
+#user-list-table td,
+#all-activities-table th,
+#all-activities-table td {
+  border: 1px solid #ddd;
+  line-height: 1.0;
+  max-width: 80px !important;
+  overflow: hidden !important;
+  padding: 8px 6px;
+  text-align: center;
+  text-overflow: ellipsis !important;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
+/* --- 17. Component: Summary Table (Definition 1) --- */
 .summaryResult table {
-    min-width: 450px;
-    font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
-    text-align: left;
+  font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
+  min-width: 450px;
+  text-align: left;
 }
 
 .summaryResult th,
 .summaryResult td {
-    font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
-    padding: 2px 1px !important;
-    line-height: 1.1 !important;
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
+  line-height: 1.1 !important;
+  overflow: hidden;
+  padding: 2px 1px !important;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
+/* --- 18. Component: Table (Base Styles) --- */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    min-width: 600px;
+  background-color: white;
+  border-collapse: collapse;
+  min-width: 600px;
+  width: 100%;
 }
 
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px 15px;
+  text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 tr:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
-/* ===== MODAL STYLING ===== */
+/* --- 19. Component: Modal (Definition 1) --- */
 .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 1); /* ✅ เปลี่ยนจาก rgba(0,0,0,0.5) เป็นสีขาวทึบ */
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    overflow-y: auto;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow-y: auto;
+  padding: 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .modal-content-container {
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 800px;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: modalFadeIn 0.3s;
-    border: 1px solid #ddd; /* ✅ เพิ่มขอบเพื่อแยกจากพื้นหลัง */
+  animation: modalFadeIn 0.3s;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+  max-height: 90vh;
+  max-width: 900px;
+  overflow-y: auto;
+  padding: 0px;
+  width: 100%;
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .modal-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 5px;
 }
 
 .modal-control-btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    color: white;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
 .modal-close-btn {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .modal-close-btn:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
 
-/* ===== POPUP STYLING ===== */
+/* --- 20. Component: Popup (Definition 1) --- */
 .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow-y: auto;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: popupFadeIn 0.3s;
+  animation: popupFadeIn 0.3s;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 900px;
+  padding: 0px;
+  width: 100%;
 }
 
 @keyframes popupFadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .modal-button-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 5px;
 }
 
 .close-popup-btn {
-    background-color: #6c757d;
-    color: white;
+  background-color: #6c757d;
+  color: white;
 }
 
 .close-popup-btn:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
 
-/* ===== FORMAT MODAL STYLING ===== */
+/* --- 21. Component: Format Modal (Definition 1) --- */
 .format-modal-content {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
 }
 
 .format-modal-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
 }
 
 .format-modal-buttons button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    color: white;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .btn-display {
-    background-color: #4CAF50;
+  background-color: #4CAF50;
 }
 
 .btn-display:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .btn-xlsx {
-    background-color: #2196F3;
+  background-color: #2196F3;
 }
 
 .btn-xlsx:hover {
-    background-color: #0b7dda;
+  background-color: #0b7dda;
 }
 
 .btn-pdf {
-    background-color: #f44336;
+  background-color: #f44336;
 }
 
 .btn-pdf:hover {
-    background-color: #d32f2f;
+  background-color: #d32f2f;
 }
 
 .btn-json {
-    background-color: #FF9800;
+  background-color: #FF9800;
 }
 
 .btn-json:hover {
-    background-color: #e68900;
+  background-color: #e68900;
 }
 
 .btn-csv {
-    background-color: #009688;
+  background-color: #009688;
 }
 
 .btn-csv:hover {
-    background-color: #00796b;
+  background-color: #00796b;
 }
 
 .btn-cancel {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .btn-cancel:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
 
-/* ===== INSTALL PROMPT STYLING ===== */
+/* --- 22. Component: Install Prompt --- */
 .install-prompt {
-    background-color: #e7f3ff;
-    border: 1px solid #b3d9ff;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    position: relative;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #e7f3ff;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  padding: 15px;
+  position: relative;
 }
 
 .close-prompt {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    color: #666;
+  color: #666;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
 }
 
 .close-prompt:hover {
-    color: #000;
+  color: #000;
 }
 
 .install-prompt h4 {
-    margin-top: 0;
-    color: #0066cc;
+  color: #06c;
+  margin-top: 0;
 }
 
 .install-prompt ul {
-    margin-bottom: 10px;
-    padding-left: 20px;
+  margin-bottom: 5px;
+  padding-left: 20px;
 }
 
 .install-prompt li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-/* ===== TOAST NOTIFICATION ===== */
+/* --- 23. Component: Toast Notification (Definition 1) --- */
 .toast-notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    color: white;
-    font-weight: 500;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(-20px);
-    max-width: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    font-size: 0.9rem;
-    line-height: 1.4;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 300px;
+  opacity: 0;
+  padding: 12px 20px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .toast-notification.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .toast-notification.success {
-    background-color: #28a745;
-    border-left: 4px solid #1e7e34;
+  background-color: #28a745;
+  border-left: 4px solid #1e7e34;
 }
 
 .toast-notification.error {
-    background-color: #dc3545;
-    border-left: 4px solid #c82333;
+  background-color: #dc3545;
+  border-left: 4px solid #c82333;
 }
 
 .toast-notification.warning {
-    background-color: #ffc107;
-    color: #212529;
-    border-left: 4px solid #e0a800;
+  background-color: #ffc107;
+  border-left: 4px solid #e0a800;
+  color: #212529;
 }
 
 .toast-notification.info {
-    background-color: #17a2b8;
-    border-left: 4px solid #138496;
+  background-color: #17a2b8;
+  border-left: 4px solid #138496;
 }
 
-/* Responsive design for toast */
 @media (max-width: 768px) {
-    .toast-notification {
-        top: 10px;
-        right: 10px;
-        left: 10px;
-        max-width: none;
-        margin: 0 auto;
-        padding: 10px 16px;
-        font-size: 0.85rem;
-    }
+  .toast-notification {
+    font-size: 0.85rem;
+    left: 10px;
+    margin: 0 auto;
+    max-width: none;
+    padding: 10px 16px;
+    right: 10px;
+    top: 10px;
+  }
 }
 
 @media (max-width: 480px) {
-    .toast-notification {
-        top: 5px;
-        right: 5px;
-        left: 5px;
-        padding: 8px 12px;
-        font-size: 0.8rem;
-        border-radius: 6px;
-    }
+  .toast-notification {
+    border-radius: 6px;
+    font-size: 0.8rem;
+    left: 5px;
+    padding: 8px 12px;
+    right: 5px;
+    top: 5px;
+  }
 }
 
-/* ===== SUMMARY RESULT STYLING ===== */
+/* --- 24. Component: Summary Result (Definition 1) --- */
 .summaryResult {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    /* เอา max-height และ overflow-y ออก */
-    width: 100%;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 1px;
+  padding: 1px;
+  width: 100%;
 }
 
 .summaryResult h2 {
-    color: #333;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+  border-bottom: 2px solid #4CAF50;
+  color: #333;
+  margin-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 .summaryResult h3 {
-    color: #555;
-    margin-top: 20px;
-    margin-bottom: 10px;
+  color: #555;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .summaryResult p {
-    margin: 8px 0;
-    line-height: 1.5;
+  line-height: 1.5;
+  margin: 8px 0;
 }
 
 .summaryResult ul {
-    margin: 10px 0;
-    padding-left: 20px;
+  margin: 10px 0;
+  padding-left: 20px;
 }
 
 .summaryResult li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-/* ===== RESPONSIVE STYLES ===== */
+/* --- 25. Responsive Media Queries (Large Block) --- */
 @media (max-width: 768px) {
-  /* ปรับปรุงการจัดวางปุ่มในส่วนจัดการกิจกรรมสำหรับมือถือ */
   .entry-form .button-container {
     flex-direction: row !important;
     flex-wrap: wrap;
     gap: 10px;
   }
-  
   .entry-form .button-container button {
     flex: 1;
     min-width: 120px;
   }
-  
-  /* ปรับปรุงการจัดวางปุ่มตั้งรหัสผ่านและลบรหัสผ่าน */
   .entry-form .button-container:last-child {
     justify-content: center;
   }
-  
   .entry-form .button-container:last-child button {
     flex: none;
-    width: auto;
     min-width: 140px;
+    width: auto;
   }
 }
-@media (max-width: 768px) {
-    .container {
-        padding: 5px;
-    }
-    
-    .form-section, .data-section {
-        padding: 10px;
-    }
-    
-    .main-section-header {
-        padding: 15px 20px;
-        font-size: 1.2rem;
-    }
-    
-    .section-header {
-        padding: 10px 12px;
-    }
-    
-    .summary-subsection-header {
-        padding: 12px 15px;
-        font-size: 1rem;
-    }
-    
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="time"],
-    select,
-    textarea {
-        padding: 10px;
-        font-size: 16px;
-    }
-    
-    button {
-        padding: 10px 15px;
-        font-size: 16px;
-    }
-    
-    .modal-content-container {
-        padding: 15px;
-        margin: 10px;
-    }
-    
-    .popup-content {
-        padding: 15px;
-        margin: 10px;
-    }
-    
-    .format-modal-content {
-        padding: 20px;
-        margin: 10px;
-    }
-    
-    .time-inputs-container {
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    
-    .time-input-group {
-        flex: 0 0 48%;
-        min-width: auto;
-    }
-    
-    .time-separator {
-        flex: 0 0 100%;
-        text-align: center;
-        margin: 10px 0;
-    }
-    
-    .button-container {
-        flex-direction: column;
-    }
-    
-    .button-container button {
-        width: 100%;
-    }
-    
-    .modal-controls {
-        flex-direction: column;
-    }
-    
-    .modal-control-btn {
-        width: 100%;
-    }
-    
-    .modal-button-group {
-        flex-direction: column;
-    }
-    
-    .modal-button-group button {
-        width: 100%;
-    }
-    
-    .format-modal-buttons button {
-        width: 100%;
-    }
-    
-    .management-actions {
-        flex-wrap: wrap;
-    }
-    
-    .management-actions button {
-        flex: 1 1 45%;
-    }
-    
-    .select-wrapper {
-        flex-wrap: wrap;
-    }
-    
-    .select-wrapper label {
-        flex: 0 0 100%;
-        text-align: left;
-        margin-bottom: 5px;
-    }
-    
-    .select-wrapper select {
-        flex: 1 1 auto;
-    }
-    
-    .manage-btn-inline {
-        flex: 0 0 auto;
-    }
-    
-    th, td {
-        padding: 8px 10px;
-        font-size: 0.9rem;
-    }
-    
-    table {
-        min-width: 500px;
-    }
 
-    /* สำหรับมือถือ - COMPACT FORM */
-    #activity-form .form-section {
-        padding: 8px 6px !important;
-        margin-bottom: 10px !important;
-    }
-    
-    #activity-form .section-content {
-        padding: 6px !important;
-        margin-bottom: 6px !important;
-    }
-    
-    .management-row {
-        margin-bottom: 6px !important;
-        gap: 4px !important;
-    }
-    
-    .time-inputs-container {
-        margin-bottom: 6px !important;
-        gap: 3px !important;
-    }
-    
-    .button-container {
-        margin-top: 6px !important;
-        gap: 4px !important;
-    }
-    
-    .header-add-data {
-        margin: 3px 0 6px !important;
-        padding: 10px 12px !important;
-    }
+@media (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+  .form-section,
+  .data-section {
+    padding: 10px;
+  }
+  .main-section-header {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+  }
+  .section-header {
+    padding: 10px 12px;
+  }
+  .summary-subsection-header {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .modal-content-container {
+    margin: 10px;
+    padding: 15px;
+  }
+  .popup-content {
+    margin: 10px;
+    padding: 15px;
+  }
+  .format-modal-content {
+    margin: 10px;
+    padding: 20px;
+  }
+  .time-inputs-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .time-input-group {
+    flex: 0 0 48%;
+    min-width: auto;
+  }
+  .time-separator {
+    flex: 0 0 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+  .button-container button {
+    width: 100%;
+  }
+  .modal-controls {
+    flex-direction: column;
+  }
+  .modal-control-btn {
+    width: 100%;
+  }
+  .modal-button-group {
+    flex-direction: column;
+  }
+  .modal-button-group button {
+    width: 100%;
+  }
+  .format-modal-buttons button {
+    width: 100%;
+  }
+  .management-actions {
+    flex-wrap: wrap;
+  }
+  .management-actions button {
+    flex: 1 1 45%;
+  }
+  .select-wrapper {
+    flex-wrap: wrap;
+  }
+  .select-wrapper label {
+    flex: 0 0 100%;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  .select-wrapper select {
+    flex: 1 1 auto;
+  }
+  .manage-btn-inline {
+    flex: 0 0 auto;
+  }
+  th,
+  td {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  table {
+    min-width: 500px;
+  }
+  #activity-form .form-section {
+    margin-bottom: 10px !important;
+    padding: 8px 6px !important;
+  }
+  #activity-form .section-content {
+    margin-bottom: 6px !important;
+    padding: 6px !important;
+  }
+  .management-row {
+    gap: 4px !important;
+    margin-bottom: 6px !important;
+  }
+  .time-inputs-container {
+    gap: 3px !important;
+    margin-bottom: 6px !important;
+  }
+  .button-container {
+    gap: 4px !important;
+    margin-top: 3px !important;
+  }
+  .header-add-data {
+    margin: 3px 0 6px !important;
+    padding: 10px 12px !important;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 3px;
-    }
-    
-    .form-section, .data-section {
-        padding: 8px;
-    }
-    
-    .main-section-header {
-        padding: 12px 15px;
-        font-size: 1.1rem;
-    }
-    
-    .section-header {
-        padding: 8px 10px;
-    }
-    
-    .summary-subsection-header {
-        padding: 10px 12px;
-        font-size: 0.9rem;
-    }
-    
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="time"],
-    select,
-    textarea {
-        padding: 8px;
-    }
-    
-    button {
-        padding: 8px 12px;
-    }
-    
-    .time-input-group {
-        flex: 0 0 100%;
-    }
-    
-    .time-separator {
-        margin: 5px 0;
-    }
-    
-    .management-actions button {
-        flex: 1 1 100%;
-    }
-    
-    .select-wrapper {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .select-wrapper label {
-        margin-right: 0;
-        margin-bottom: 5px;
-    }
-    
-    .select-wrapper select {
-        width: 100%;
-    }
-    
-    .manage-btn-inline {
-        align-self: flex-start;
-        margin-top: 5px;
-    }
-
-    /* สำหรับมือถือขนาดเล็ก - COMPACT FORM */
-    #activity-form {
-        padding: 5px !important;
-    }
-    
-    #activity-form .form-section {
-        padding: 6px 4px !important;
-        margin-bottom: 8px !important;
-    }
-    
-    #activity-form .section-content {
-        padding: 4px !important;
-        margin-bottom: 4px !important;
-    }
-    
-    .management-row {
-        margin-bottom: 4px !important;
-        gap: 3px !important;
-    }
-    
-    .time-inputs-container {
-        margin-bottom: 4px !important;
-    }
-    
-    .button-container {
-        margin-top: 4px !important;
-    }
-    
-    .header-add-data {
-        margin: 2px 0 4px !important;
-        padding: 8px 10px !important;
-        font-size: 1rem !important;
-    }
+  .container {
+    padding: 3px;
+  }
+  .form-section,
+  .data-section {
+    padding: 8px;
+  }
+  .main-section-header {
+    font-size: 1.1rem;
+    padding: 12px 15px;
+  }
+  .section-header {
+    padding: 8px 10px;
+  }
+  .summary-subsection-header {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    padding: 8px;
+  }
+  button {
+    padding: 8px 12px;
+  }
+  .time-input-group {
+    flex: 0 0 100%;
+  }
+  .time-separator {
+    margin: 5px 0;
+  }
+  .management-actions button {
+    flex: 1 1 100%;
+  }
+  .select-wrapper {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .select-wrapper label {
+    margin-bottom: 5px;
+    margin-right: 0;
+    text-align: left;
+  }
+  .select-wrapper select {
+    width: 100%;
+  }
+  .manage-btn-inline {
+    align-self: flex-start;
+    margin-top: 5px;
+  }
+  #activity-form {
+    padding: 5px !important;
+  }
+  #activity-form .form-section {
+    margin-bottom: 8px !important;
+    padding: 6px 4px !important;
+  }
+  #activity-form .section-content {
+    margin-bottom: 4px !important;
+    padding: 4px !important;
+  }
+  .management-row {
+    gap: 3px !important;
+    margin-bottom: 4px !important;
+  }
+  .time-inputs-container {
+    margin-bottom: 4px !important;
+  }
+  .button-container {
+    margin-top: 4px !important;
+  }
+  .header-add-data {
+    font-size: 1rem !important;
+    margin: 2px 0 4px !important;
+    padding: 8px 10px !important;
+  }
 }
 
-/* ===== PRINT STYLES ===== */
+/* --- 26. Print Styles --- */
 @media print {
-    body * {
-        visibility: hidden;
-    }
-    
-    #print-container, #print-container * {
-        visibility: visible;
-    }
-    
-    #print-container {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-    }
-    
-    button, .modal-controls, .install-prompt {
-        display: none !important;
-    }
+  body * {
+    visibility: hidden;
+  }
+  #print-container,
+  #print-container * {
+    visibility: visible;
+  }
+  #print-container {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  button,
+  .modal-controls,
+  .install-prompt {
+    display: none !important;
+  }
 }
 
-/* ===== ACCESSIBILITY ===== */
+/* --- 27. Accessibility Preferences --- */
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 @media (prefers-contrast: high) {
-    .main-section-header,
-    .summary-subsection-header {
-        border: 2px solid currentColor;
-    }
-    
-    button {
-        border: 1px solid currentColor;
-    }
+  .main-section-header,
+  .summary-subsection-header {
+    border: 2px solid currentColor;
+  }
+  button {
+    border: 1px solid currentColor;
+  }
 }
 
-/* ===== DARK MODE SUPPORT ===== */
+/* --- 28. Dark Mode Styles --- */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-    
-    .form-section, .data-section {
-        background-color: #1e1e1e;
-        border-color: #333;
-    }
-    
-    .section-content {
-        background-color: #1e1e1e;
-        border-color: #333;
-    }
-    
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="time"],
-    select,
-    textarea {
-        background-color: #2d2d2d;
-        color: #e0e0e0;
-        border-color: #444;
-    }
-    
-    table {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-    }
-    
-    th {
-        background-color: #2d2d2d;
-    }
-    
-    tr:hover {
-        background-color: #2d2d2d;
-    }
-    
-    .modal-content-container,
-    .popup-content,
-    .format-modal-content {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-    }
-    
-    .summaryResult {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-    }
-    
-    .install-prompt {
-        background-color: #1a237e;
-        border-color: #283593;
-        color: #e0e0e0;
-    }
-    
-    .install-prompt h4 {
-        color: #bbdefb;
-    }
-    
-    /* Dark mode for improved headers */
-    .header-add-data {
-        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-        border-left: 6px solid #e74c3c;
-    }
-    
-    .header-actions {
-        background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
-        border-left: 6px solid #27ae60;
-    }
-    
-    .header-summary {
-        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
-        border-left: 6px solid #e67e22;
-    }
-    
-    .summary-subsection-header {
-        background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
-    }
-    
-    .summary-subsection-header.summary-date {
-        background: linear-gradient(135deg, #16a085 0%, #138a72 100%);
-    }
-    
-    .summary-subsection-header.summary-range {
-        background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
-        color: #ecf0f1;
-    }
-    
-    .summary-subsection-header.summary-controls {
-        background: linear-gradient(135deg, #e84393 0%, #d63031 100%);
-    }
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  .form-section,
+  .data-section {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  .section-content {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+  table {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  th {
+    background-color: #2d2d2d;
+  }
+  tr:hover {
+    background-color: #2d2d2d;
+  }
+  .modal-content-container,
+  .popup-content,
+  .format-modal-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  .summaryResult {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  .install-prompt {
+    background-color: #1a237e;
+    border-color: #283593;
+    color: #e0e0e0;
+  }
+  .install-prompt h4 {
+    color: #bbdefb;
+  }
+  .header-add-data {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    border-left: 6px solid #e74c3c;
+  }
+  .header-actions {
+    background: linear-gradient(135deg, #27ae60 0%, #219653 100%);
+    border-left: 6px solid #27ae60;
+  }
+  .header-summary {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    border-left: 6px solid #e67e22;
+  }
+  .summary-subsection-header {
+    background: linear-gradient(135deg, #8e44ad 0%, #732d91 100%);
+  }
+  .summary-subsection-header.summary-date {
+    background: linear-gradient(135deg, #16a085 0%, #138a72 100%);
+  }
+  .summary-subsection-header.summary-range {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: #ecf0f1;
+  }
+  .summary-subsection-header.summary-controls {
+    background: linear-gradient(135deg, #e84393 0%, #d63031 100%);
+  }
 }
 
-/* ===== TIME INPUTS STYLING - IMPROVED FOR MOBILE ===== */
+/* --- 29. Component: Time Inputs (Definition 2) --- */
+/* (This block seems to be an override for responsive states) */
 .time-inputs-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 15px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding-bottom: 5px;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 8px;
+  overflow-x: auto;
+  padding-bottom: 5px;
 }
 
 .time-input-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 0 0 auto;
-    min-width: 120px;
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  min-width: 120px;
 }
 
 .time-input-group input[type="time"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
 }
 
 .time-label {
-    margin-top: 5px;
-    font-size: 0.85rem;
-    color: #666;
-    white-space: nowrap;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  white-space: nowrap;
 }
 
 .time-separator {
-    font-weight: bold;
-    color: #333;
-    margin: 0 5px;
-    white-space: nowrap;
+  color: #333;
+  font-weight: bold;
+  margin: 0 5px;
+  white-space: nowrap;
 }
 
-/* ปรับปรุงสำหรับมือถือ */
 @media (max-width: 768px) {
-    .time-inputs-container {
-        flex-wrap: wrap;
-        justify-content: space-between;
-        overflow-x: visible;
-    }
-    
-    .time-input-group {
-        flex: 0 0 48%;
-        min-width: auto;
-        margin-bottom: 10px;
-    }
-    
-    .time-separator {
-        flex: 0 0 100%;
-        text-align: center;
-        margin: 0 0 10px 0;
-        order: 3;
-    }
+  .time-inputs-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: visible;
+  }
+  .time-input-group {
+    flex: 0 0 48%;
+    margin-bottom: 5px;
+    min-width: auto;
+  }
+  .time-separator {
+    flex: 0 0 100%;
+    margin: 0 0 10px 0;
+    order: 3;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .time-input-group {
-        flex: 0 0 100%;
-    }
-    
-    .time-separator {
-        margin: 5px 0;
-    }
+  .time-input-group {
+    flex: 0 0 100%;
+  }
+  .time-separator {
+    margin: 5px 0;
+  }
 }
-/* ===== TABLE STYLING ===== */
+
+/* --- 30. Component: Table (Themed Definitions) --- */
+/* (This block adds specific themes to tables) */
 .table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  overflow-x: auto;
+  width: 100%;
 }
 
 #activityTable,
@@ -1560,765 +1521,724 @@ tr:hover {
 #activity-types-table,
 #user-list-table,
 #all-activities-table {
-    table-layout: auto;
-    width: auto;
-    min-width: 100%;
-    border-collapse: collapse;
+  border-collapse: collapse;
+  min-width: 100%;
+  table-layout: auto;
+  width: auto;
 }
 
-#activityTable th, #activityTable td,
-#modalBodyContent table th, #modalBodyContent table td,
-.summaryResult table th, .summaryResult table td,
-#activity-list-table th, #activity-list-table td,
-#activity-types-table th, #activity-types-table td,
-#user-list-table th, #user-list-table td,
-#all-activities-table th, #all-activities-table td {
-    white-space: nowrap;
-    vertical-align: middle;
-    padding: 8px 6px;
-    line-height: 1.2;
-    border: 1px solid #ddd;
-    text-align: center;
+#activityTable th,
+#activityTable td,
+#modalBodyContent table th,
+#modalBodyContent table td,
+.summaryResult table th,
+.summaryResult table td,
+#activity-list-table th,
+#activity-list-table td,
+#activity-types-table th,
+#activity-types-table td,
+#user-list-table th,
+#user-list-table td,
+#all-activities-table th,
+#all-activities-table td {
+  border: 1px solid #ddd;
+  line-height: 0.8;
+  padding: 6px 4px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    min-width: 600px;
+  background-color: white;
+  border-collapse: collapse;
+  min-width: 600px;
+  width: 100%;
 }
 
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  padding: 12px 15px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 th {
-    background: linear-gradient(135deg, #4a6572 0%, #344955 100%);
-    color: white;
-    font-weight: 600;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    border: 1px solid #2c3e50;
+  background: linear-gradient(135deg, #4a6572 0%, #344955 100%);
+  border: 1px solid #2c3e50;
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  top: 0;
+  z-index: 10;
 }
 
-/* สีพื้นหลังสลับกันสำหรับแต่ละแถว */
 tr:nth-child(even) {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 tr:nth-child(odd) {
-    background-color: #ffffff;
+  background-color: #fff;
 }
 
-/* สีตัวหนังสือที่ชัดเจน */
 td {
-    color: #2c3e50;
-    font-weight: 500;
-    border: 1px solid #e9ecef;
+  border: 1px solid #e9ecef;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
-/* Hover effect */
 tr:hover {
-    background-color: #e3f2fd;
-    transform: translateY(-1px);
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #e3f2fd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  transition: all 0.2s ease;
 }
 
 tr:hover td {
-    color: #1a237e;
-    font-weight: 600;
+  color: #1a237e;
+  font-weight: 600;
 }
 
-/* สำหรับตารางใน summary */
 .summaryResult table {
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .summaryResult th {
-    background: linear-gradient(135deg, #ff9f43 0%, #ff8b33 100%);
-    color: white;
-    font-weight: 600;
-    border: 1px solid #e67e22;
+  background: linear-gradient(135deg, #ff9f43 0%, #ff8b33 100%);
+  border: 1px solid #e67e22;
+  color: white;
+  font-weight: 600;
 }
 
 .summaryResult td {
-    color: #2c3e50;
-    font-weight: 500;
-    border: 1px solid #f1f2f6;
+  border: 1px solid #f1f2f6;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
 .summaryResult tr:nth-child(even) {
-    background-color: #fff9f2;
+  background-color: #fff9f2;
 }
 
 .summaryResult tr:nth-child(odd) {
-    background-color: #ffffff;
+  background-color: #fff;
 }
 
 .summaryResult tr:hover {
-    background-color: #ffeaa7;
+  background-color: #ffeaa7;
 }
 
-.summaryResult tr:hover td {
-    color: #e17055;
+tr:hover td {
+  color: #e17055;
 }
 
-/* สำหรับตารางกิจกรรม */
 #activityTable th {
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    color: white;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
 }
 
 #activityTable tr:hover {
-    background-color: #e8f4fd;
+  background-color: #e8f4fd;
 }
 
 #activityTable tr:hover td {
-    color: #1565c0;
+  color: #1565c0;
 }
 
-/* สำหรับตารางผู้ใช้ */
 #user-list-table th {
-    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
-    color: white;
+  background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+  color: white;
 }
 
 #user-list-table tr:hover {
-    background-color: #e0f7fa;
+  background-color: #e0f7fa;
 }
 
 #user-list-table tr:hover td {
-    color: #006064;
+  color: #006064;
 }
 
-/* สำหรับตารางประเภทกิจกรรม */
 #activity-types-table th {
-    background: linear-gradient(135deg, #f46b45 0%, #eea849 100%);
-    color: white;
+  background: linear-gradient(135deg, #f46b45 0%, #eea849 100%);
+  color: white;
 }
 
 #activity-types-table tr:hover {
-    background-color: #fff3e0;
+  background-color: #fff3e0;
 }
 
 #activity-types-table tr:hover td {
-    color: #e65100;
+  color: #e65100;
 }
 
-/* สำหรับตารางทั้งหมด */
 #all-activities-table th {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
 }
 
 #all-activities-table tr:hover {
-    background-color: #f3e5f5;
+  background-color: #f3e5f5;
 }
 
 #all-activities-table tr:hover td {
-    color: #7b1fa2;
+  color: #7b1fa2;
 }
 
-/* ปรับปรุงสำหรับมือถือ */
+/* --- 31. Component: Table (Responsive Overrides) --- */
 @media (max-width: 768px) {
-    th, td {
-        padding: 10px 12px;
-        font-size: 0.85rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    table {
-        min-width: 500px;
-    }
-    
-    th {
-        font-size: 0.8rem;
-        padding: 8px 10px;
-    }
-    
-    td {
-        font-size: 0.8rem;
-        padding: 8px 10px;
-    }
-    
-    .summaryResult table {
-        font-size: 0.75rem;
-    }
-    
-    .summaryResult th,
-    .summaryResult td {
-        font-size: 0.75rem;
-        padding: 6px 8px;
-    }
+  th,
+  td {
+    font-size: 0.85rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 0.5px 5px 0.5px !important; /* บน 10, ขวา 2, ล่าง 5, ซ้าย 2 */
+    white-space: nowrap;
+  }
+  table {
+    min-width: 500px;
+  }
+  th {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+  td {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+  .summaryResult table {
+    font-size: 0.75rem;
+  }
+  .summaryResult th,
+  .summaryResult td {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
 }
 
 @media (max-width: 480px) {
-    th, td {
-        padding: 8px 10px;
-        font-size: 0.75rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    
-    th {
-        font-size: 0.75rem;
-        padding: 6px 8px;
-    }
-    
-    td {
-        font-size: 0.75rem;
-        padding: 6px 8px;
-    }
-    
-    .summaryResult table {
-        font-size: 0.7rem;
-    }
-    
-    .summaryResult th,
-    .summaryResult td {
-        font-size: 0.7rem;
-        padding: 4px 6px;
-    }
+  th,
+  td {
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+  th {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+  td {
+    font-size: 0.75rem;
+    padding: 6px 8px;
+  }
+  .summaryResult table {
+    font-size: 0.7rem;
+  }
+  .summaryResult th,
+  .summaryResult td {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+  }
 }
 
-/* Dark mode support */
+/* --- 32. Component: Table (Dark Mode Overrides) --- */
 @media (prefers-color-scheme: dark) {
-    table {
-        background-color: #1e1e1e;
-        color: #e0e0e0;
-    }
-    
-    th {
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        color: #ecf0f1;
-        border: 1px solid #34495e;
-    }
-    
-    tr:nth-child(even) {
-        background-color: #2d2d2d;
-    }
-    
-    tr:nth-child(odd) {
-        background-color: #252525;
-    }
-    
-    td {
-        color: #ecf0f1;
-        border: 1px solid #34495e;
-    }
-    
-    tr:hover {
-        background-color: #34495e;
-    }
-    
-    tr:hover td {
-        color: #ffffff;
-    }
-    
-    /* Summary table in dark mode */
-    .summaryResult table {
-        background-color: #1e1e1e;
-    }
-    
-    .summaryResult th {
-        background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
-        color: white;
-    }
-    
-    .summaryResult tr:nth-child(even) {
-        background-color: #2d2d2d;
-    }
-    
-    .summaryResult tr:nth-child(odd) {
-        background-color: #252525;
-    }
-    
-    .summaryResult tr:hover {
-        background-color: #e67e22;
-    }
-    
-    .summaryResult tr:hover td {
-        color: #ffffff;
-    }
+  table {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+  }
+  th {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    border: 1px solid #34495e;
+    color: #ecf0f1;
+  }
+  tr:nth-child(even) {
+    background-color: #2d2d2d;
+  }
+  tr:nth-child(odd) {
+    background-color: #252525;
+  }
+  td {
+    border: 1px solid #34495e;
+    color: #ecf0f1;
+  }
+  tr:hover {
+    background-color: #34495e;
+  }
+  tr:hover td {
+    color: #fff;
+  }
+  .summaryResult table {
+    background-color: #1e1e1e;
+  }
+  .summaryResult th {
+    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    color: white;
+  }
+  .summaryResult tr:nth-child(even) {
+    background-color: #2d2d2d;
+  }
+  tr:nth-child(odd) {
+    background-color: #252525;
+  }
+  .summaryResult tr:hover {
+    background-color: #e67e22;
+  }
+  .summaryResult tr:hover td {
+    color: #fff;
+  }
 }
 
-/* ===== MODAL STYLING ===== */
+/* --- 33. Component: Modal (Definition 2 - Overrides) --- */
 .modal-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    z-index: 1000;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0;
-    overflow-y: auto;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 1);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow-y: auto;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .modal-content-container {
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 800px;
-    max-height: 90vh;  /* ← เปลี่ยนเป็น 90vh */
-    overflow-y: auto;  /* ← ให้เลื่อนทั้ง modal */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: modalFadeIn 0.3s;
-    border: 1px solid #ddd;
-}
-@media (max-width: 768px) {
-    .summaryResult {
-        padding: 15px !important;
-        margin: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-    
-    .modal-content-container {
-        max-height: 95vh; /* บนมือถือให้สูงเกือบเต็มจอ */
-        margin: 10px;
-        width: calc(100% - 20px);
-    }
-}
-@keyframes modalFadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+  animation: modalFadeIn 0.3s;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 1px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-height: 90vh;
+  max-width: 900px;
+  overflow-y: auto;
+  padding: 10px 0.5px 5px 0.5px !important; /* บน 10, ขวา 2, ล่าง 5, ซ้าย 2 */
+  width: 100%;
 }
 
+@media (max-width: 768px) {
+  .summaryResult {
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 10px 0.5px 5px 0.5px !important; /* บน 10, ขวา 2, ล่าง 5, ซ้าย 2 */
+    width: 100% !important;
+  }
+
+  .modal-content-container {
+    margin: 10px;
+    max-height: 95vh;
+    width: calc(100% - 20px);
+  }
+}
+
+
 .modal-controls {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 5px;
 }
 
 .modal-control-btn {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    color: white;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
 }
 
 .modal-close-btn {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .modal-close-btn:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
 
-/* ===== POPUP STYLING ===== */
+/* --- 34. Component: Popup (Definition 2 - Overrides) --- */
 .popup-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .popup-content {
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    animation: popupFadeIn 0.3s;
-}
-
-@keyframes popupFadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+  animation: popupFadeIn 0.3s;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  padding: 5px;
+  width: 100%;
 }
 
 .modal-button-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 5px;
 }
 
 .close-popup-btn {
-    background-color: #6c757d;
-    color: white;
+  background-color: #6c757d;
+  color: white;
 }
 
 .close-popup-btn:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
 
-/* ===== FORMAT MODAL STYLING ===== */
+/* --- 35. Component: Format Modal (Definition 2 - Overrides) --- */
 .format-modal-content {
-    background-color: white;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
 }
 
 .format-modal-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 5px;
 }
 
 .format-modal-buttons button {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-    color: white;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 12px;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .btn-display {
-    background-color: #4CAF50;
+  background-color: #4CAF50;
 }
 
 .btn-display:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
 .btn-xlsx {
-    background-color: #2196F3;
+  background-color: #2196F3;
 }
 
 .btn-xlsx:hover {
-    background-color: #0b7dda;
+  background-color: #0b7dda;
 }
 
 .btn-pdf {
-    background-color: #f44336;
+  background-color: #f44336;
 }
 
 .btn-pdf:hover {
-    background-color: #d32f2f;
+  background-color: #d32f2f;
 }
 
 .btn-json {
-    background-color: #FF9800;
+  background-color: #FF9800;
 }
 
 .btn-json:hover {
-    background-color: #e68900;
+  background-color: #e68900;
 }
 
 .btn-csv {
-    background-color: #009688;
+  background-color: #009688;
 }
 
 .btn-csv:hover {
-    background-color: #00796b;
+  background-color: #00796b;
 }
 
 .btn-cancel {
-    background-color: #6c757d;
+  background-color: #6c757d;
 }
 
 .btn-cancel:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
+
+/* --- 36. Component: Summary Table (Responsive Overrides) --- */
 @media (max-width: 768px) {
-    .summaryResult table.recent-activities {
-        font-size: clamp(0.45rem, 1.5vw, 0.6rem) !important;
-    }
-    
-    .summaryResult table.recent-activities th,
-    .summaryResult table.recent-activities td {
-        font-size: clamp(0.45rem, 1.5vw, 0.6rem) !important;
-        padding: 1px 0.5px !important;
-    }
+  .summaryResult table.recent-activities {
+    font-size: clamp(0.45rem, 1.5vw, 0.6rem) !important;
+  }
+  .summaryResult table.recent-activities th,
+  .summaryResult table.recent-activities td {
+    font-size: clamp(0.45rem, 1.5vw, 0.6rem) !important;
+    padding: 1px 0.5px !important;
+  }
 }
+
 .summaryResult table.recent-activities td {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 80px !important; /* ปรับตามความเหมาะสม */
+  max-width: 80px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
-@media (max-width: 768px) {
-    .summaryResult table.recent-activities {
-        font-size: clamp(0.45rem, 1.5vw, 0.6rem) !important;
-    }
-    
-    .summaryResult table.recent-activities th,
-    .summaryResult table.recent-activities td {
-        font-size: clamp(0.45rem, 1.5vw, 0.6rem) !important;
-        padding: 1px 0.5px !important;
-    }
-}
+
 @media (max-width: 480px) {
-    .summaryResult table.recent-activities {
-        font-size: clamp(0.4rem, 1.2vw, 0.55rem) !important;
-    }
-    
-    .summaryResult table.recent-activities th,
-    .summaryResult table.recent-activities td {
-        font-size: clamp(0.4rem, 1.2vw, 0.55rem) !important;
-    }
+  .summaryResult table.recent-activities {
+    font-size: clamp(0.4rem, 1.2vw, 0.55rem) !important;
+  }
+  .summaryResult table.recent-activities th,
+  .summaryResult table.recent-activities td {
+    font-size: clamp(0.4rem, 1.2vw, 0.55rem) !important;
+  }
 }
+
 .summaryResult table.recent-activities {
-    font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
+  font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
 }
 
 .summaryResult table.recent-activities th,
 .summaryResult table.recent-activities td {
-    font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
-    padding: 2px 1px !important;
-    line-height: 1.1 !important;
+  font-size: clamp(0.5rem, 1.8vw, 0.65rem) !important;
+  line-height: 1.1 !important;
+  padding: 2px 1px !important;
 }
+
 .summaryResult table {
-    min-width: 450px;
-    font-size: clamp(0.6rem, 2.2vw, 0.7rem); /* ← ตรงนี้ */
-    text-align: left;
+  font-size: clamp(0.6rem, 2.2vw, 0.7rem);
+  min-width: 450px;
+  text-align: left;
 }
 
 .summaryResult th,
 .summaryResult td {
-    padding: 3px 2px;
-    font-size: clamp(0.6rem, 2.2vw, 0.7rem); /* ← และตรงนี้ */
-    text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: clamp(0.6rem, 2.2vw, 0.7rem);
+  overflow: hidden;
+  padding: 3px 2px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-/* ===== RESPONSIVE SUMMARY FRAME ===== */
+
+/* --- 37. Component: Modal & Summary (Responsive Overrides) --- */
 @media (max-width: 768px) {
-    .summaryResult {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 10px !important;
-        border-radius: 10px !important;
-        box-sizing: border-box !important;
-    }
-    
-    .modal-content-container {
-        padding: 10px !important;
-        margin: 10px !important;
-        width: calc(100% - 20px) !important;
-        max-width: calc(100% - 20px) !important;
-    }
-    
-    #modalBodyContent {
-        width: 100% !important;
-        padding: 0 !important;
-    }
+  .summaryResult {
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    padding: 10px 0.5px 5px 0.5px !important; 
+    width: 100% !important;
+  }
+  .modal-content-container {
+    margin: 2px !important;
+    max-width: calc(100% - 4px) !important;
+    padding: 10px 0.5px 5px 0.5px !important; 
+    width: calc(100% - 10px) !important;
+  }
+  #modalBodyContent {
+    padding: 0 !important;
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 480px) {
-    .summaryResult {
-        padding: 8px !important;
-        border-width: 1px !important;
-    }
-    
-    .modal-content-container {
-        padding: 5px !important;
-        margin: 5px !important;
-        width: calc(100% - 10px) !important;
-        max-width: calc(100% - 10px) !important;
-    }
+  .summaryResult {
+    border-width: 1px !important;
+    padding: 10px 0.5px 5px 0.5px !important; 
+  }
+  .modal-content-container {
+    margin: 5px !important;
+    max-width: calc(100% - 10px) !important;
+    padding: 10px 0.5px 5px 0.5px !important; 
+    width: calc(100% - 10px) !important;
+  }
 }
+
+/* --- 38. Component: Table (Specific #activityTable Overrides) --- */
 #activityTable td,
 #activityTable th {
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    max-width: none !important;
-    word-break: break-word;
+  max-width: none !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  white-space: normal !important;
+  word-break: break-word;
 }
-/* ===== ปรับเฉพาะตารางจัดการกิจกรรม (#activityTable) ===== */
+
 #activityTable {
-    table-layout: auto;
-    width: max-content; /* ตารางกว้างตามเนื้อหา */
-    min-width: 100%; /* แต่ไม่เล็กกว่า container */
-    font-size: clamp(0.7rem, 1.2vw, 0.8rem); /* ย่อขนาดอักษรอัตโนมัติ */
+  font-size: clamp(0.7rem, 1.2vw, 0.8rem);
+  min-width: 100%;
+  table-layout: auto;
+  width: max-content;
 }
 
 #activityTable td,
 #activityTable th {
-    white-space: nowrap !important; /* แสดงเป็นแถวเดียว */
-    overflow: hidden !important;    /* ซ่อนส่วนที่เกิน */
-    text-overflow: ellipsis !important; /* แสดง ... ถ้ายาวเกิน */
-    max-width: 200px; /* จำกัดความกว้างของแต่ละช่อง */
-    padding: 6px 8px;
-    line-height: 1.2;
+  line-height: 1.2;
+  max-width: 200px;
+  overflow: hidden !important;
+  padding: 6px 8px;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
 
-/* เพิ่มการเลื่อนแนวนอนเฉพาะส่วนนี้ */
 .table-container {
-    overflow-x: auto !important;
-    width: 100%;
-    -webkit-overflow-scrolling: touch; /* รองรับการเลื่อนในมือถือ */
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
-/* ===== FOOTER STYLING ===== */
+
+/* --- 39. Layout: Footer --- */
 footer {
-    text-align: center;
-    padding: 12px 15px;
-    margin: 10px auto 10px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    max-width: 600px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    font-size: clamp(0.7rem, 2.5vw, 0.9rem); /* ปรับขนาดฟอนต์ให้ยืดหยุ่น */
-    line-height: 1.3; /* เพิ่มระยะบรรทัด */
-    white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: white;
+  display: flex;
+  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+  gap: 8px;
+  justify-content: center;
+  line-height: 1.3;
+  margin: 10px auto 10px;
+  max-width: 600px;
+  overflow: hidden;
+  padding: 12px 15px;
+  position: relative;
+  text-align: center;
+  white-space: normal;
+  width: 100%;
 }
 
 footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+  content: '';
+  height: 3px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 footer div {
-    font-weight: 600;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-    display: inline;
+  display: inline;
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive design for footer */
 @media (max-width: 768px) {
-    footer {
-        margin: 25px 10px 12px;
-        padding: 12px 15px;
-        border-radius: 25px;
-        max-width: calc(100% - 20px);
-        font-size: clamp(0.65rem, 2.2vw, 0.8rem);
-        gap: 6px;
-        line-height: 1.4;
-    }
+  footer {
+    border-radius: 25px;
+    font-size: clamp(0.65rem, 2.2vw, 0.8rem);
+    margin: 25px 10px 12px;
+    gap: 6px;
+    line-height: 1.4;
+    max-width: calc(100% - 20px);
+    padding: 12px 15px;
+  }
 }
 
 @media (max-width: 480px) {
-    footer {
-        margin: 20px 5px 10px;
-        padding: 10px 12px;
-        border-radius: 20px;
-        max-width: calc(100% - 10px);
-        font-size: clamp(0.6rem, 2vw, 0.75rem);
-        gap: 4px;
-        line-height: 1.5;
-    }
-    
-    footer div {
-        white-space: normal;
-        display: block;
-    }
+  footer {
+    border-radius: 20px;
+    font-size: clamp(0.6rem, 2vw, 0.75rem);
+    margin: 20px 5px 10px;
+    gap: 4px;
+    line-height: 1.5;
+    max-width: calc(100% - 10px);
+    padding: 10px 12px;
+  }
+  footer div {
+    display: block;
+    white-space: normal;
+  }
 }
 
-/* Dark mode support */
 @media (prefers-color-scheme: dark) {
-    footer {
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    }
-    
-    footer::before {
-        background: linear-gradient(90deg, #e74c3c, #1abc9c, #3498db, #2ecc71, #f1c40f);
-    }
+  footer {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  }
+  footer::before {
+    background: linear-gradient(90deg, #e74c3c, #1abc9c, #3498db, #2ecc71, #f1c40f);
+  }
 }
-/* ===== TIME INPUTS STYLING - IMPROVED LAYOUT ===== */
+
+/* --- 40. Component: Time Inputs (Definition 3) --- */
 .time-inputs-container {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 8px;
   width: 100%;
 }
 
 .time-input-group {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  flex: 1; /* ทำให้ทั้งสองกลุ่มมีความกว้างเท่ากัน */
-  min-width: 0; /* ป้องกันปัญหา overflow */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
 }
 
 .time-input-group input[type="time"] {
-  width: 100%;
-  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 1rem;
   box-sizing: border-box;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
 }
 
 .time-label {
-  margin-top: 5px;
-  font-size: 0.85rem;
   color: #666;
+  font-size: 0.85rem;
+  margin-top: 5px;
   white-space: nowrap;
 }
 
 .time-separator {
-  font-weight: bold;
   color: #333;
+  flex-shrink: 0;
+  font-weight: bold;
   margin: 0 5px;
   white-space: nowrap;
-  flex-shrink: 0; /* ป้องกันการหดตัว */
 }
 
-/* ปรับปรุงสำหรับมือถือ */
 @media (max-width: 768px) {
   .time-inputs-container {
     gap: 8px;
   }
-  
   .time-input-group input[type="time"] {
+    font-size: 16px;
     padding: 10px;
-    font-size: 16px; /* ป้องกัน zoom บน iOS */
   }
-  
   .time-label {
     font-size: 0.8rem;
   }
-  
   .time-separator {
     font-size: 0.9rem;
     margin: 0 3px;
@@ -2329,26 +2249,24 @@ footer div {
   .time-inputs-container {
     gap: 5px;
   }
-  
   .time-input-group input[type="time"] {
     padding: 8px;
   }
-  
   .time-label {
     font-size: 0.75rem;
   }
-  
   .time-separator {
     font-size: 0.85rem;
     margin: 0 2px;
   }
 }
-/* ===== MANAGEMENT ROW STYLING ===== */
+
+/* --- 41. Component: Management Controls (Definition 2) --- */
 .management-row {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   width: 100%;
 }
 
@@ -2357,96 +2275,106 @@ footer div {
 }
 
 .select-wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
+  gap: 8px;
   margin-bottom: 5px;
   width: 100%;
-  gap: 8px;
 }
 
 .manage-btn-inline {
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  font-size: 16px;
-  border-radius: 8px;
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  display: flex;
   flex-shrink: 0;
+  font-size: 16px;
+  height: 38px;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+  width: 38px;
 }
 
 .management-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   margin-top: 5px;
-  flex-wrap: wrap;
 }
 
-.add-btn, .edit-btn, .delete-btn, .reset-btn {
-  padding: 6px 10px;
+.add-btn,
+.edit-btn,
+.delete-btn,
+.reset-btn {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  flex: 1;
-  min-width: 60px;
+  border-radius: 2px;
   color: white;
+  cursor: pointer;
+  flex: 1;
+  font-size: 10px;
+  min-width: 50px;
+  padding: 0px 5px; /* (Fixed syntax) */
 }
 
-.add-btn { background-color: #28a745; }
-.edit-btn { background-color: #ffc107; color: #212529 !important; }
-.delete-btn { background-color: #dc3545; }
-.reset-btn { background-color: #17a2b8; }
+.add-btn {
+  background-color: #28a745;
+}
 
-/* สำหรับเดสก์ท็อป */
+.edit-btn {
+  background-color: #ffc107;
+  color: #212529 !important;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.reset-btn {
+  background-color: #17a2b8;
+}
+
 @media (min-width: 769px) {
   .management-row {
-    flex-direction: row;
     flex-wrap: nowrap;
+    flex-direction: row;
   }
-  
   .management-container {
     flex: 1;
   }
 }
 
-/* สำหรับมือถือ */
 @media (max-width: 768px) {
   .management-row {
-    flex-direction: row; /* เปลี่ยนเป็นแถวเดียวกันบนมือถือ */
-    flex-wrap: wrap; /* อนุญาตให้ขึ้นบรรทัดใหม่ถ้าจอเล็กเกิน */
+    flex-wrap: nowrap;
     gap: 8px;
+    flex-direction: row;
   }
-  
   .management-container {
-    flex: 1 1 48%; /* ให้แต่ละคอนเทนเนอร์มีความกว้างประมาณครึ่งหนึ่ง */
-    min-width: 0; /* ป้องกันปัญหา overflow */
+    flex: 1 1 48%;
+    min-width: 0;
   }
-  
   .select-wrapper {
     gap: 6px;
   }
-  
   .manage-btn-inline {
-    width: 32px;
-    height: 32px;
     font-size: 14px;
+    height: 34px;
+    width: 34px;
   }
-  
   .management-actions {
     gap: 4px;
   }
-  
-  .add-btn, .edit-btn, .delete-btn, .reset-btn {
-    padding: 5px 8px;
+  .add-btn,
+  .edit-btn,
+  .delete-btn,
+  .reset-btn {
     font-size: 11px;
-    min-width: 55px;
+    min-width: 45px;
+    padding: 3px 5px;
   }
 }
 
@@ -2454,31 +2382,34 @@ footer div {
   .management-row {
     gap: 6px;
   }
-  
   .manage-btn-inline {
-    width: 30px;
-    height: 30px;
     font-size: 13px;
+    height: 30px;
+    width: 30px;
   }
-  
-  .add-btn, .edit-btn, .delete-btn, .reset-btn {
-    padding: 4px 6px;
+  .add-btn,
+  .edit-btn,
+  .delete-btn,
+  .reset-btn {
     font-size: 10px;
     min-width: 50px;
+    padding: 4px 6px;
   }
 }
+
+/* --- 42. Specific Form & Component Overrides --- */
 .management-container {
-    margin-bottom: 6px !important;
+  margin-bottom: 6px !important;
 }
 
 .select-wrapper {
-    margin: 3px auto !important;
+  margin: 3px auto !important;
 }
 
 #activity-form label {
-    margin-top: 4px !important;
-    margin-bottom: 3px !important;
-    font-size: 0.9rem !important;
+  font-size: 0.9rem !important;
+  margin-bottom: 3px !important;
+  margin-top: 4px !important;
 }
 
 #activity-form input[type="text"],
@@ -2487,28 +2418,29 @@ footer div {
 #activity-form input[type="time"],
 #activity-form select,
 #activity-form textarea {
-    padding: 6px 8px !important;
-    font-size: 0.9rem !important;
+  font-size: 0.9rem !important;
+  padding: 6px 8px !important;
 }
 
 .time-inputs-container {
-    margin-bottom: 6px !important;
-    gap: 4px !important;
+  gap: 4px !important;
+  margin-bottom: 6px !important;
 }
-/* ปรับปุ่มทำความสะอาดข้อมูลทั้งหมดให้พอดีกับเนื้อหา */
+
 .button-container .clean-data-btn {
-    width: auto !important;
-    flex: none !important;
-    padding: 10px 15px !important;
-    white-space: nowrap !important;
-    display: inline-block !important;
+  display: inline-block !important;
+  flex: none !important;
+  padding: 10px 15px !important;
+  white-space: nowrap !important;
+  width: auto !important;
 }
-/* ===== MANAGEMENT ROW STYLING ===== */
+
+/* --- 43. Component: Management Controls (Definition 3) --- */
 .management-row {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   width: 100%;
 }
 
@@ -2517,96 +2449,106 @@ footer div {
 }
 
 .select-wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
+  gap: 8px;
   margin-bottom: 5px;
   width: 100%;
-  gap: 8px;
 }
 
 .manage-btn-inline {
-  width: 36px;
-  height: 36px;
-  padding: 0;
-  font-size: 16px;
-  border-radius: 8px;
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
   flex-shrink: 0;
+  font-size: 16px;
+  height: 38px;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.2s ease;
+  width: 38px;
 }
 
 .management-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   margin-top: 5px;
-  flex-wrap: wrap;
 }
 
-.add-btn, .edit-btn, .delete-btn, .reset-btn {
-  padding: 6px 10px;
+.add-btn,
+.edit-btn,
+.delete-btn,
+.reset-btn {
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  flex: 1;
-  min-width: 60px;
+  border-radius: 2px;
   color: white;
+  cursor: pointer;
+  flex: 1;
+  font-size: 12px;
+  min-width: 50px;
+  padding: 4px 8px;
 }
 
-.add-btn { background-color: #28a745; }
-.edit-btn { background-color: #ffc107; color: #212529 !important; }
-.delete-btn { background-color: #dc3545; }
-.reset-btn { background-color: #17a2b8; }
+.add-btn {
+  background-color: #28a745;
+}
 
-/* สำหรับเดสก์ท็อป */
+.edit-btn {
+  background-color: #ffc107;
+  color: #212529 !important;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}
+
+.reset-btn {
+  background-color: #17a2b8;
+}
+
 @media (min-width: 769px) {
   .management-row {
-    flex-direction: row;
     flex-wrap: nowrap;
+    flex-direction: row;
   }
-  
   .management-container {
     flex: 1;
   }
 }
 
-/* สำหรับมือถือ */
 @media (max-width: 768px) {
   .management-row {
-    flex-direction: row; /* เปลี่ยนเป็นแถวเดียวกันบนมือถือ */
-    flex-wrap: wrap; /* อนุญาตให้ขึ้นบรรทัดใหม่ถ้าจอเล็กเกิน */
+    flex-wrap: wrap;
     gap: 8px;
+    flex-direction: row;
   }
-  
   .management-container {
-    flex: 1 1 48%; /* ให้แต่ละคอนเทนเนอร์มีความกว้างประมาณครึ่งหนึ่ง */
-    min-width: 0; /* ป้องกันปัญหา overflow */
+    flex: 1 1 48%;
+    min-width: 0;
   }
-  
   .select-wrapper {
     gap: 6px;
   }
-  
   .manage-btn-inline {
-    width: 32px;
-    height: 32px;
     font-size: 14px;
+    height: 34px;
+    width: 34px;
   }
-  
   .management-actions {
     gap: 4px;
   }
-  
-  .add-btn, .edit-btn, .delete-btn, .reset-btn {
-    padding: 5px 8px;
+  .add-btn,
+  .edit-btn,
+  .delete-btn,
+  .reset-btn {
     font-size: 11px;
     min-width: 55px;
+    padding: 5px 8px;
   }
 }
 
@@ -2614,208 +2556,307 @@ footer div {
   .management-row {
     gap: 6px;
   }
-  
   .manage-btn-inline {
-    width: 30px;
-    height: 30px;
     font-size: 13px;
+    height: 30px;
+    width: 30px;
   }
-  
-  .add-btn, .edit-btn, .delete-btn, .reset-btn {
-    padding: 4px 6px;
+  .add-btn,
+  .edit-btn,
+  .delete-btn,
+  .reset-btn {
     font-size: 10px;
     min-width: 50px;
+    padding: 4px 6px;
   }
 }
-/* สไตล์เฉพาะสำหรับแถวผู้ทำกิจกรรมและประเภทกิจกรรม */
+
+/* --- 44. Component: Management Controls (Compact Layout 1) --- */
 .management-row.compact-layout {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
+  display: flex;
   gap: 10px;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 8px;
   width: 100%;
 }
 
-.management-row.compact-layout .management-container {
-  flex: 1;
+.management-container.full-width {
   display: flex;
+  flex: 1;
   flex-direction: column;
+  min-width: 0;
+}
+
+.management-container.full-width .select-wrapper {
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 0;
+  width: 100%;
 }
 
-.management-row.compact-layout .select-wrapper {
-  width: 100%;
-  margin-bottom: 5px;
+.management-container.full-width .select-wrapper select {
+  flex: 1;
+  margin: 0;
+  min-width: 0;
 }
 
-.management-row.compact-layout .management-actions {
-  width: 100%;
+.management-container.full-width .manage-btn-inline {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 36px;
   justify-content: center;
+  margin: 0;
+  width: 36px;
 }
 
-/* สำหรับมือถือ */
+.management-container.full-width .management-actions {
+  display: none;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.management-container.full-width .management-actions.active {
+  display: flex;
+}
+
+.management-container.full-width .management-actions button {
+  flex: 1;
+  font-size: 12px;
+  height: 32px;
+  max-width: 100px;
+  min-width: 60px;
+  padding: 4px 6px;
+}
+
 @media (max-width: 768px) {
   .management-row.compact-layout {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  
-  .management-row.compact-layout .management-container {
-    flex: 1;
-  }
-  
-  .management-row.compact-layout .select-wrapper {
+    gap: 12px;
     flex-direction: column;
-    align-items: center;
   }
-  
-  .management-row.compact-layout .manage-btn-inline {
-    margin-bottom: 5px;
+  .management-container.full-width {
+    width: 100%;
+  }
+  .management-container.full-width .select-wrapper {
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+  }
+  .management-container.full-width .select-wrapper select {
+    flex: 1;
+    min-width: 120px;
+  }
+  .management-container.full-width .manage-btn-inline {
+    flex-shrink: 0;
+    height: 34px;
+    width: 34px;
+  }
+  .management-container.full-width .management-actions {
+    gap: 6px;
+    margin-top: 8px;
+    width: 100%;
+  }
+  .management-container.full-width .management-actions button {
+    flex: 1 1 calc(50% - 6px);
+    font-size: 12px;
+    height: 36px;
+    max-width: 100px;
+    min-width: 70px;
   }
 }
+
+@media (max-width: 480px) {
+  .management-container.full-width .select-wrapper {
+    gap: 6px;
+  }
+  .management-container.full-width .select-wrapper select {
+    font-size: 14px;
+    min-width: 100px;
+  }
+  .management-container.full-width .manage-btn-inline {
+    font-size: 16px;
+    height: 34px;
+    width: 34px;
+  }
+  .management-container.full-width .management-actions button {
+    flex: 1 1 calc(50% - 3px);
+    font-size: 11px;
+    min-width: 65px;
+    padding: 4px 6px;
+  }
+}
+
+/* --- 45. Utility Classes --- */
+.form-section.no-border {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .form-section.no-border {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section.no-border {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+/* --- 46. Component: Toast Notification (Definition 2 - Overrides) --- */
 .toast-notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    border-radius: 4px;
-    color: white;
-    font-weight: bold;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(-20px);
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  padding: 12px 20px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+  z-index: 1000;
 }
 
 .toast-notification.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .toast-notification.success {
-    background-color: #FF15C2;
+  background-color: #FF15C2;
 }
 
 .toast-notification.error {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 
 .toast-notification.warning {
-    background-color: #ffc107;
-    color: #000;
+  background-color: #ffc107;
+  color: #000;
 }
 
 .toast-notification.info {
-    background-color: #17a2b8;
+  background-color: #17a2b8;
 }
-/* สไตล์สำหรับ Modal เลือกวันที่ใหม่ */
+
+/* --- 47. Component: Format Modal (Definition 3 - Content Style) --- */
 .format-modal-content .entry-form {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 30px;
-    margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border-radius: 30px;
+  margin-bottom: 5px;
+  padding: 15px;
 }
 
 .format-modal-content .entry-group {
-    margin-bottom: 15px;
+  margin-bottom: 8px;
 }
 
 .format-modal-content label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+  color: #333;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .format-modal-content input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
 }
 
 .format-modal-content input[type="date"]:focus {
-    border-color: #4a90e2;
-    outline: none;
-    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+  border-color: #4a90e2;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+  outline: none;
 }
 
-/* ปรับปรุงปุ่มใน modal */
 .format-modal-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .format-modal-buttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.3s;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
 }
 
 .format-modal-buttons .btn-display {
-    background-color: #28a745;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
 .format-modal-buttons .btn-display:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .format-modal-buttons .btn-cancel {
-    background-color: #6c757d;
-    color: white;
+  background-color: #6c757d;
+  color: white;
 }
 
 .format-modal-buttons .btn-cancel:hover {
-    background-color: #5a6268;
+  background-color: #5a6268;
 }
+
+/* --- 48. Specific Button & Form Styles --- */
 #save-activity-button {
-  display: inline-block;
-  background-color: #FF00FF;
-  color: white;
-  font-weight: bold;
-  padding: 8px 16px;
-  font-size: 1.1rem;
+  background-color: #F0F;
   border: 3px solid #196B24;
   border-radius: 28px;
+  box-sizing: border-box;
+  color: white;
   cursor: pointer;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 8px 16px;
   transition: all 0.3s ease;
   white-space: nowrap;
   width: fit-content;
-  box-sizing: border-box;
 }
 
-  /* สไตล์เมื่อโฟกัสเพื่อการเข้าถึง */
-  #save-activity-button:focus {
-    outline: 3px solid rgba(46,204,113,0.25);
-    outline-offset: 2px;
-  }
+#save-activity-button:focus {
+  outline: 3px solid rgba(46, 204, 113, 0.25);
+}
 
-  /* เอฟเฟกต์เล็กน้อยเมื่อชี้เมาส์ */
-  #save-activity-button:hover {
-    transform: translateY(-1px);
-  }
-/* เพิ่มในส่วนท้ายของ style.css */
+#save-activity-button:hover {
+  transform: translateY(-1px);
+}
+
 #add-data-section .entry-form {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 #add-data-section .date-time-group {
-    margin-top: 0;
-    margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 0;
 }
-/* ===== ปรับขนาดปุ่มในส่วนจัดการกิจกรรม ===== */
 
-/* ปุ่มบันทึกชั่วคราวและบันทึกข้อมูล */
 #manage-activities-form .button-container:first-child {
   display: flex;
   gap: 10px;
@@ -2824,52 +2865,47 @@ footer div {
 
 #manage-activities-form .button-container:first-child button {
   flex: 1;
-  min-width: 0;
-  width: 100%;
-  padding: 12px 10px;
   font-size: clamp(0.8rem, 2.5vw, 1rem);
-  white-space: nowrap;
+  min-width: 0;
+  padding: 12px 10px;
   text-align: center;
+  white-space: nowrap;
+  width: 100%;
 }
 
-/* ปุ่มตั้งรหัสผ่านและลบรหัสผ่าน */
 #manage-activities-form .button-container:last-child {
   display: flex;
   gap: 10px;
-  width: 100%;
   justify-content: center;
+  width: 100%;
 }
 
 #manage-activities-form .button-container:last-child button {
   flex: 1;
-  min-width: 0;
-  max-width: 150px;
-  padding: 10px 5px;
   font-size: clamp(0.75rem, 2.2vw, 0.9rem);
-  white-space: nowrap;
+  max-width: 150px;
+  min-width: 0;
+  padding: 10px 5px;
   text-align: center;
+  white-space: nowrap;
 }
 
-/* สำหรับมือถือ */
 @media (max-width: 768px) {
   #manage-activities-form .button-container:first-child {
-    flex-direction: row;
     flex-wrap: nowrap;
+    flex-direction: row;
   }
-  
   #manage-activities-form .button-container:first-child button {
-    padding: 10px 8px;
     font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+    padding: 10px 8px;
   }
-  
   #manage-activities-form .button-container:last-child {
     flex-wrap: nowrap;
   }
-  
   #manage-activities-form .button-container:last-child button {
+    font-size: clamp(0.7rem, 2vw, 0.85rem);
     max-width: 140px;
     padding: 8px 4px;
-    font-size: clamp(0.7rem, 2vw, 0.85rem);
   }
 }
 
@@ -2877,44 +2913,1019 @@ footer div {
   #manage-activities-form .button-container:first-child {
     gap: 8px;
   }
-  
   #manage-activities-form .button-container:first-child button {
-    padding: 8px 6px;
     font-size: clamp(0.7rem, 2vw, 0.85rem);
+    padding: 8px 6px;
   }
-  
   #manage-activities-form .button-container:last-child {
     gap: 8px;
   }
-  
   #manage-activities-form .button-container:last-child button {
+    font-size: clamp(0.65rem, 1.8vw, 0.8rem);
     max-width: 130px;
     padding: 7px 3px;
-    font-size: clamp(0.65rem, 1.8vw, 0.8rem);
   }
 }
-/* ===== NO BORDER STYLING ===== */
-.form-section.no-border {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
+
+/* --- 49. Component: Duration Inputs (Definition 1) --- */
+.duration-inputs-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
-/* สำหรับมือถือ */
+.duration-input-group {
+  align-items: center;
+  display: flex;
+  /* flex: 1; ❌ ลบออกไปแล้วใน Definition 2 ด้านล่าง*/
+  flex-direction: column;
+}
+
+.duration-input-group input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.duration-label {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+#start-time {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+/* --- 50. Component: Time Inputs (Definition 4) --- */
+.time-inputs-row {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.time-inputs-row .time-input-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.time-inputs-row .time-input-group input[type="time"] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
-    .form-section.no-border {
-        padding: 0 !important;
-        margin: 0 !important;
-    }
+  .time-inputs-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .time-inputs-row .time-input-group {
+    width: 100%;
+  }
+}
+
+/* --- 51. Component: Time Inputs (Definition 5) --- */
+.time-inputs-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.time-row {
+  align-items: flex-end;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.time-row .time-input-group {
+  flex: 1;
+  min-width: 150px;
+}
+
+.time-row .time-input-group input[type="time"] {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .time-row {
+    gap: 8px;
+    flex-direction: row;
+  }
+  .time-row .time-input-group {
+    width: 100%;
+  }
+}
+
+/* --- 52. Component: Management Controls (Compact Layout 2) --- */
+.management-row.compact-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.management-container.full-width {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.management-container.full-width .select-wrapper {
+  margin: 0;
+  width: 100%;
+}
+
+.management-container.full-width select {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.management-container.full-width .select-wrapper,
+.time-input-group {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .management-row.compact-layout {
+    flex-direction: column;
+  }
+  .management-container.full-width {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .management-row.compact-layout {
+    flex-direction: column;
+  }
+  .management-container.full-width {
+    width: 100%;
+  }
+  .management-container.full-width .select-wrapper {
+    align-items: center;
+    flex-direction: row;
+  }
+  .management-container.full-width .manage-btn-inline {
+    margin-right: 8px;
+  }
+}
+
+/* --- Component: Duration Inputs (Definition 2) --- */
+.duration-inputs-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  /* ลบ margin-left: 200px; เพื่อให้จัดกึ่งกลางได้จริง */
+  justify-content: center; /* **✅ แก้ไข: จัดกึ่งกลางบนจอใหญ่** */
+/* ค่าเริ่มต้น */
+}
+
+@media (max-width: 768px) {
+  .duration-inputs-container {
+    flex-wrap: nowrap;
+    justify-content: center; /* **✅ แก้ไข: จัดกึ่งกลางบนมือถือ** */
+    /* ลบ margin-left: 90px; เพื่อให้จัดกึ่งกลางได้จริง */
+    overflow-x: auto;
+}
+}
+
+.duration-input-group {
+  align-items: center;
+  display: flex;
+  /* ❌ ลบ flex: 1; */
+  flex-shrink: 0; /* **✅ เพิ่ม: ไม่ยืดขยาย** */
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .duration-input-group {
+    /* ❌ ลบ flex: 1; */
+    flex-shrink: 0; /* **✅ เพิ่ม: ไม่ยืดขยาย** */
+    min-width: 80px;
+}
+}
+
+.duration-input-group input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.duration-label {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+#start-time {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+/* --- Component: Time Inputs (Definition 6) --- */
+.time-inputs-section .date-wrapper {
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+  position: relative;
+width: 100%;
+}
+
+.time-inputs-section .display-date {
+  color: #000;
+  font-size: 14px;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: 100px;
+/* ค่าเริ่มต้น */
+}
+
+.time-inputs-section input[type="time"] {
+  box-sizing: border-box;
+  margin-left: auto;
+  max-width: 150px;
+  padding: 8px 8px 8px 100px;
+/* ค่าเริ่มต้น */
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .time-inputs-section .display-date {
+    font-size: 13px;
+width: 85px;
+  }
+  .time-inputs-section input[type="time"] {
+    padding: 8px 8px 8px 85px;
+}
+}
+/* --- Component: Time Inputs (Final Definition) --- */
+.time-row {
+  align-items: flex-end;
+  display: flex;
+  gap: 10px;
+/* ค่าเริ่มต้น */
+  justify-content: center; /* **✅ แก้ไข: จัดกึ่งกลาง** */
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .time-row {
+    gap: 20px;
+    justify-content: center;
+}
+}
+
+@media (max-width: 768px) {
+  .time-row {
+    gap: 8px;
+    flex-direction: row;
+    justify-content: center; /* **✅ เพิ่ม: จัดกึ่งกลางบนมือถือ** */
+}
 }
 
 @media (max-width: 480px) {
-    .form-section.no-border {
-        padding: 0 !important;
-        margin: 0 !important;
+  .time-row {
+    gap: 6px;
+  }
+}
+
+.time-input-group {
+  align-items: center;
+  display: flex;
+flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+@media (min-width: 769px) {
+  .time-input-group {
+    max-width: 200px;
+}
+}
+
+.time-label-bottom {
+  color: #555;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.time-input-group .date-wrapper {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+position: relative;
+  width: 100%;
+}
+
+.time-input-group .display-date {
+  color: #000;
+  font-size: 14px; /* ค่าเริ่มต้น/หน้าจอใหญ่ */
+  left: 0;
+  pointer-events: none;
+position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: 100px; /* ค่าเริ่มต้น/หน้าจอใหญ่ */
+}
+
+@media (max-width: 768px) {
+  .time-input-group .display-date {
+    font-size: 13px;
+width: 85px;
+  }
+}
+
+@media (max-width: 480px) {
+  .time-input-group .display-date {
+    font-size: 12px;
+    width: 80px;
+}
+}
+
+.time-input-group input[type="time"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  margin-left: 0;
+  max-width: 150px;
+/* ค่าเริ่มต้น */
+  padding: 8px; /* ค่าเริ่มต้น */
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .time-input-group input[type="time"] {
+    max-width: 180px;
+    padding: 10px 10px 10px 100px;
+}
+}
+
+@media (max-width: 768px) {
+  .time-input-group input[type="time"] {
+    max-width: 130px;
+    padding: 8px 8px 8px 85px;
+}
+}
+
+@media (max-width: 480px) {
+  .time-input-group input[type="time"] {
+    font-size: 14px;
+    max-width: 120px;
+    padding: 6px 6px 6px 80px;
+}
+}
+
+/* ซ้ำกัน: ถูกรวมไว้ด้านบนแล้ว แต่มี ID ซ้ำกัน */
+#start-time {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+/* --- Component: Summary Date Display --- */
+.summary-date-display {
+  align-items: center;
+  display: flex;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .summary-date-display {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+.summary-date-display .date-label {
+  color: #000;
+font-size: 14px; /* ค่าเริ่มต้น */
+  font-weight: bold;
+  margin-right: 10px; /* ค่าเริ่มต้น/768px */
+  text-align: left;
+  white-space: nowrap;
+  width: 100px;
+/* ค่าเริ่มต้น */
+}
+
+@media (max-width: 768px) {
+  .summary-date-display .date-label {
+    font-size: 13px;
+    margin-bottom: 0;
+    width: 90px;
+}
+}
+
+@media (max-width: 480px) {
+  .summary-date-display .date-label {
+    font-size: 12px;
+    width: 85px;
+}
+}
+
+.summary-date-display input[type="date"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  font-size: 14px; /* ค่าเริ่มต้น/768px */
+  max-width: 200px;
+/* ค่าเริ่มต้น */
+  padding: 8px; /* ค่าเริ่มต้น/768px */
+}
+
+@media (max-width: 768px) {
+  .summary-date-display input[type="date"] {
+    flex: 1;
+max-width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-date-display input[type="date"] {
+    font-size: 13px;
+    max-width: 130px;
+    padding: 6px;
+}
+}
+/* --- Component: Management Controls (Definition 4) --- */
+.select-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+/* ค่าเริ่มต้น */
+  justify-content: center; /* ค่าเริ่มต้น */
+  margin: 10px auto;
+  min-height: 44px;
+/* เพิ่มจากส่วนอื่น */
+  width: 80%; /* ค่าเริ่มต้น */
+}
+
+@media (max-width: 768px) {
+  /* รวมจาก 3 media queries 768px โดยตัด !important และการกำหนดซ้ำซ้อนที่ไม่จำเป็นออก */
+  .select-wrapper {
+    align-items: center;
+flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%;
+}
+}
+
+@media (max-width: 480px) {
+  .select-wrapper {
+    gap: 6px;
+  }
+}
+
+.select-wrapper select {
+  flex-grow: 1;
+  margin: 0;
+width: auto; /* ค่าเริ่มต้น */
+}
+
+@media (max-width: 768px) {
+  .select-wrapper select {
+    flex: 1;
+    min-width: 120px;
+}
+}
+
+@media (max-width: 480px) {
+  .select-wrapper select {
+    font-size: 14px;
+  }
+}
+
+.manage-btn-inline {
+  align-items: center;
+  background-color: #009BD2;
+border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 20px; /* ค่าเริ่มต้น */
+  height: 38px;
+justify-content: center;
+  line-height: 42px;
+  padding: 0;
+  transition: all 0.2s ease;
+  width: 44px; /* ค่าเริ่มต้น */
+}
+
+.manage-btn-inline:hover {
+  background-color: #E97132;
+transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+  /* รวมจาก 3 media queries 768px โดยตัด !important และการกำหนดซ้ำซ้อนที่ไม่จำเป็นออก */
+  .manage-btn-inline {
+    flex-shrink: 0;
+font-size: 18px;
+    height: 38px;
+    margin: 0;
+    width: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-btn-inline {
+    font-size: 16px;
+}
+}
+
+
+.management-actions {
+  align-items: center;
+  animation: fadeIn 0.3s;
+  display: none; /* ซ่อนตามค่าเริ่มต้น */
+  gap: 10px;
+/* ค่าเริ่มต้น */
+  height: 36px; /* ค่าเริ่มต้น */
+  justify-content: center;
+  margin: 5px auto 15px;
+/* ค่าเริ่มต้น */
+  width: 80%; /* ค่าเริ่มต้น */
+}
+
+.management-actions.active {
+  display: flex;
+/* แสดงเมื่อมี class .active */
+}
+
+@media (max-width: 768px) {
+  /* รวมจาก 3 media queries 768px โดยตัด !important และการกำหนดซ้ำซ้อนที่ไม่จำเป็นออก */
+  .management-actions {
+    gap: 6px;
+height: auto;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 5px auto 10px;
+  }
+  .management-actions.active {
+    display: flex;
+flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 480px) {
+  /* การกำหนดที่ 480px สำหรับ .management-actions ไม่ได้มีอะไรใหม่มากนอกจากปุ่ม */
+}
+
+.management-actions button {
+  align-items: center;
+border: none;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  font-size: 14px; /* ค่าเริ่มต้น */
+  height: 36px;
+  justify-content: center;
+  margin: 0;
+padding: 6px 12px; /* ค่าเริ่มต้น */
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  /* รวมจาก 3 media queries 768px โดยตัด !important และการกำหนดซ้ำซ้อนที่ไม่จำเป็นออก */
+  .management-actions button {
+    flex: 1 1 calc(50% - 6px);
+/* 1 1 40% ถูกแทนที่ด้วยการคำนวณที่ละเอียดกว่า */
+    font-size: 12px;
+    height: 36px;
+    min-width: 70px;
+/* ค่าที่มากที่สุดจาก 60px/70px */
+    max-width: 100px;
+    padding: 4px 8px;
+    white-space: nowrap;
+}
+}
+
+@media (max-width: 480px) {
+  .management-actions button {
+    flex: 1 1 calc(50% - 3px);
+    font-size: 11px;
+min-width: 65px;
+    padding: 4px 6px;
+  }
+}
+
+/* ชุดสีของปุ่ม */
+.add-btn { background-color: #28a745; }
+.add-btn:hover { background-color: #218838; }
+.edit-btn { background-color: #ffc107;
+color: #212529 !important; }
+.edit-btn:hover { background-color: #e0a800; }
+.delete-btn { background-color: #dc3545; }
+.delete-btn:hover { background-color: #c82333; }
+.reset-btn { background-color: #17a2b8;
+}
+.reset-btn:hover { background-color: #138496; }
+
+/* input พิเศษ */
+@media (max-width: 768px) {
+  #customPersonInput,
+  #customActivityTypeInput {
+    margin: 5px auto;
+width: 90%;
+  }
+}
+/* --- Component: Management Controls (Compact Layout 3) --- */
+.management-row.compact-layout {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+gap: 10px; /* ค่าเริ่มต้น */
+  justify-content: space-between;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .management-row.compact-layout {
+    gap: 8px;
+    flex-direction: row;
+  }
+}
+
+.management-container.full-width {
+  display: flex;
+flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.management-container.full-width .select-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 8px;
+/* ค่าเริ่มต้น */
+  margin-bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .management-container.full-width .select-wrapper {
+    gap: 6px;
+}
+}
+
+.management-container.full-width .select-wrapper select {
+  flex: 1;
+  margin: 0;
+  min-width: 0;
+/* ค่าเริ่มต้น */
+}
+
+@media (max-width: 768px) {
+  .management-container.full-width .select-wrapper select {
+    min-width: 120px;
+}
+}
+
+@media (max-width: 480px) {
+  .management-container.full-width .select-wrapper select {
+    font-size: 14px;
+    min-width: 100px;
+}
+}
+
+.management-container.full-width .manage-btn-inline {
+  align-items: center;
+  display: flex;
+  flex-shrink: 0;
+  height: 38px;
+  justify-content: center;
+  margin: 0;
+  width: 38px;
+}
+
+@media (max-width: 480px) {
+  .management-container.full-width .manage-btn-inline {
+    font-size: 16px;
+  }
+}
+
+.management-container.full-width .management-actions {
+  display: none;
+flex-wrap: wrap;
+  gap: 5px; /* ค่าเริ่มต้น */
+  justify-content: center;
+  margin-top: 5px; /* ค่าเริ่มต้น */
+  width: 100%;
+}
+
+.management-container.full-width .management-actions.active {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .management-container.full-width .management-actions {
+    gap: 6px;
+margin-top: 8px;
+    width: 100%;
+  }
+}
+
+.management-container.full-width .management-actions button {
+  flex: 1; /* ค่าเริ่มต้น */
+  font-size: 12px;
+/* ค่าเริ่มต้น */
+  height: 32px; /* ค่าเริ่มต้น */
+  max-width: 100px; /* ค่าเริ่มต้น */
+  min-width: 60px;
+/* ค่าเริ่มต้น */
+  padding: 4px 6px; /* ค่าเริ่มต้น */
+}
+
+@media (max-width: 768px) {
+  .management-container.full-width .management-actions button {
+    flex: 1 1 calc(50% - 6px);
+font-size: 12px;
+    height: 36px;
+    max-width: 100px;
+    min-width: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .management-container.full-width .management-actions button {
+    flex: 1 1 calc(50% - 3px);
+font-size: 11px;
+    min-width: 65px;
+    padding: 4px 6px;
+  }
+}
+/* --- START FIX: Center Duration Section (จัดกึ่งกลางส่วนระยะเวลา) --- */
+
+/* 1. จัดกึ่งกลางกล่องคลุมใหญ่ */
+.time-input-group.duration-block {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  float: none !important;
+  width: 100% !important;
+  max-width: 100% !important; /* ให้เต็มความกว้างเพื่อจัดภายในได้ง่าย */
+}
+
+/* 2. จัดกึ่งกลางส่วนหัวข้อ (Label: ระยะเวลา) */
+.duration-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 5px !important;
+}
+
+.duration-wrapper .display-date {
+  position: static !important; /* ยกเลิก absolute position เก่า */
+  width: auto !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+/* 3. จัดกึ่งกลางกล่องรวม input (ชั่วโมง/นาที) */
+.duration-inputs-container {
+  display: flex !important;
+  justify-content: center !important; /* หัวใจสำคัญ: จัดแนวนอนให้กลาง */
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  gap: 15px !important; /* ระยะห่างระหว่างช่องชั่วโมงกับนาที */
+  overflow: visible !important;
+}
+
+/* 4. จัดการตัว Input แต่ละก้อน (กล่องชั่วโมง กล่องนาที) */
+.duration-input-group {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  flex: 0 0 auto !important; /* ห้ามยืด ห้ามหด */
+  width: auto !important;
+  min-width: 80px !important; /* ความกว้างขั้นต่ำเพื่อให้ดูสวย */
+  margin: 0 !important;
+}
+
+.duration-input-group input {
+  text-align: center !important;
+  margin: 0 auto !important;
+}
+
+.duration-label {
+  text-align: center !important;
+  width: 100% !important;
+  margin-top: 5px !important;
+}
+
+/* 5. แก้ไขเฉพาะบนมือถือ (Mobile Fixes) */
+@media (max-width: 768px) {
+  .duration-inputs-container {
+    flex-wrap: nowrap !important; /* ห้ามปัดตกบรรทัด */
+    justify-content: center !important;
+  }
+  
+  .time-input-group.duration-block {
+    padding: 0 10px !important;
+  }
+}
+
+/* --- START FIX: Shorten Start/End Time (ปรับเวลาเริ่มต้น/สิ้นสุดให้สั้นลง) --- */
+
+/* 1. จัดระเบียบแถวแนวนอนให้กึ่งกลาง */
+.time-row {
+  justify-content: center !important;
+  gap: 15px !important; /* ระยะห่างระหว่าง 2 ช่อง */
+}
+
+/* 2. บังคับกล่องคลุมไม่ให้ยืดเต็มจอ */
+.time-row .time-input-group {
+  flex: 0 0 auto !important; /* ไม่ให้ยืด (Grow) */
+  min-width: auto !important; /* ยกเลิกความกว้างขั้นต่ำเดิม */
+  width: auto !important;     /* ให้กว้างเท่าที่เนื้อหาจำเป็น */
+}
+
+/* 3. กำหนดความกว้างของช่องกรอกเวลา (ปรับเลขตรงนี้เพื่อให้สั้น/ยาว) */
+.time-row input[type="time"] {
+  width: 130px !important;      /* <<-- แก้เลขนี้ ถ้าอยากให้สั้นลงหรือยาวขึ้น */
+  max-width: 130px !important;  /* ล็อคไม่ให้เกินนี้ */
+  padding: 8px 5px !important;  /* จัดระยะขอบในให้พอดี */
+  text-align: center !important; /* ตัวเลขเวลาอยู่ตรงกลาง */
+}
+
+/* 4. ปรับขนาดตัวหนังสือ Label ด้านล่างให้เหมาะสม */
+.time-label-bottom {
+  font-size: 0.85rem !important;
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 5. ปรับแต่งสำหรับมือถือ (ไม่ให้เล็กเกินไปจนจิ้มยาก) */
+@media (max-width: 480px) {
+  .time-row input[type="time"] {
+    width: 120px !important; /* บนมือถืออาจจะให้เล็กลงอีกนิดหน่อย */
+    font-size: 0.9rem !important;
+  }
+}
+/* --- START: Compact Add Activity Fix (ปรับระยะห่างหน้าเพิ่มกิจกรรมให้กระชับ) --- */
+
+/* 1. ลดช่องว่างรวมระหว่างแถวในฟอร์ม (จากเดิม 12px เหลือ 2px) */
+#activity-form {
+    gap: 2px !important;
+    padding: 4px !important;
+}
+
+/* 2. ปรับระยะห่างส่วนเลือกผู้ทำกิจกรรม/ประเภทกิจกรรม */
+#activity-form .management-row {
+    margin-bottom: 0px !important;
+    gap: 4px !important;
+}
+#activity-form .management-container {
+    margin-bottom: 2px !important;
+}
+#activity-form .select-wrapper {
+    margin: 2px auto !important;
+    min-height: 30px !important; /* ลดความสูงขั้นต่ำลง */
+}
+#activity-form .select-wrapper select {
+    height: 32px !important; /* ปรับความสูงกล่องเลือก */
+    padding: 2px 5px !important;
+}
+#activity-form .manage-btn-inline {
+    height: 32px !important; /* ปรับปุ่มเฟืองให้เล็กลงเท่ากล่องเลือก */
+    width: 32px !important;
+    font-size: 14px !important;
+}
+
+/* 3. ปรับระยะห่างส่วนวันที่ */
+#activity-form .date-wrapper {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+#activity-form input[type="date"] {
+    padding: 4px !important;
+    height: 32px !important;
+}
+
+/* 4. ปรับระยะห่างส่วนเวลา (ระยะเวลา + เริ่มต้น/สิ้นสุด) */
+#activity-form .time-inputs-section {
+    margin-bottom: 0px !important;
+    gap: 2px !important;
+}
+#activity-form .duration-inputs-container {
+    margin-top: 0px !important;
+    margin-bottom: 2px !important;
+}
+#activity-form .time-row {
+    margin-top: 0px !important;
+    margin-bottom: 2px !important;
+    gap: 8px !important;
+}
+
+/* ปรับความสูง input ตัวเลขและเวลา */
+#activity-form input[type="number"],
+#activity-form input[type="time"] {
+    padding: 4px !important;
+    height: 32px !important;
+    font-size: 0.9rem !important;
+}
+
+/* 5. ปรับส่วนรายละเอียด (Textarea) */
+#activity-form label {
+    margin-top: 2px !important;
+    margin-bottom: 1px !important;
+    font-size: 0.85rem !important;
+}
+#activity-form textarea {
+    margin-top: 0px !important;
+    margin-bottom: 2px !important;
+    padding: 4px !important;
+    height: 60px !important; /* กำหนดความสูงให้พอดี ไม่กินที่ */
+}
+
+/* 6. ปรับระยะห่างปุ่มบันทึก */
+#activity-form .center {
+    margin-top: 4px !important;
+}
+#save-activity-button {
+    margin-top: 0px !important;
+    padding: 6px 15px !important;
+}
+
+/* 7. ลดขนาดปุ่มแสดง/ซ่อนกิจกรรมด้านล่างสุด */
+#activity-form .button-container {
+    margin-top: 4px !important;
+}
+
+/* --- START: Inline Password Fix (จัดช่องรหัสผ่านให้อยู่บรรทัดเดียวกับข้อความ) --- */
+
+/* 1. บังคับให้คอนเทนเนอร์เรียงเป็นแนวนอน (Flex Row) */
+#manage-activities-form .entry-group {
+    display: flex !important;
+    flex-direction: row !important; /* บังคับแนวนอนเสมอ ทั้ง PC และ Mobile */
+    align-items: center !important; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    justify-content: center !important;
+    gap: 10px !important; /* ระยะห่างระหว่างข้อความกับช่องกรอก */
+    width: 100% !important;
+    max-width: 90% !important; /* บีบความกว้างไม่ให้ชิดขอบจอเกินไป */
+    margin: 4px auto !important; /* จัดกึ่งกลางหน้าจอ */
+}
+
+/* 2. ปรับแต่ง Label (ข้อความนำหน้า) */
+#manage-activities-form .entry-group label {
+    margin: 0 !important;
+    white-space: nowrap !important; /* สำคัญ: ห้ามตัดคำขึ้นบรรทัดใหม่ */
+    flex-shrink: 0 !important; /* ห้ามหดข้อความ */
+    width: auto !important;
+    font-size: clamp(0.8rem, 2.5vw, 1rem) !important; /* ขนาดตัวอักษรยืดหยุ่น */
+}
+
+/* 3. ปรับแต่งกล่องหุ้ม Input (ตัวที่มี position relative) */
+#manage-activities-form .entry-group > div {
+    flex: 1 !important; /* ยืดขยายให้เต็มพื้นที่ที่เหลือ */
+    margin-top: 0 !important;
+    width: auto !important;
+}
+
+/* 4. ปรับขนาด Input และการจัดวาง */
+#manage-activities-form input[type="password"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 8px 35px 8px 10px !important; /* เว้นที่ด้านขวาไว้สำหรับ icon ลูกตา */
+}
+
+/* 5. ปรับแต่งกรณีหน้าจอมือถือเล็กมาก (Mobile Fix) */
+@media (max-width: 480px) {
+    #manage-activities-form .entry-group {
+        gap: 5px !important; /* ลดระยะห่างลง */
+        max-width: 100% !important;
+    }
+    
+    #manage-activities-form .entry-group label {
+        font-size: 0.8rem !important; /* ลดขนาดตัวอักษรลงนิดหน่อยเพื่อให้พอดีบรรทัดเดียว */
     }
 }
-}
+
+/* --- END: Inline Password Fix --- */
